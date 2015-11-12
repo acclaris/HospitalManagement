@@ -24,11 +24,13 @@ public class HospitalManagementConroller {
 	private HospitalService hospitalService;
 	
 	@RequestMapping(value="/", method=RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
-	public @ResponseBody List<User> getWelcomePage(HttpServletRequest request, HttpServletResponse response){
-		
-		return hospitalService.executeStuff();
-		
-		
+	public String getIndexPage(HttpServletRequest request, HttpServletResponse response){		
+		return hospitalService.getIndex();			
+	}	
+	
+	@RequestMapping(value="/users", method=RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody List<User> getWelcomePage(HttpServletRequest request, HttpServletResponse response){		
+		return hospitalService.executeStuff();		
 	}
 
 }

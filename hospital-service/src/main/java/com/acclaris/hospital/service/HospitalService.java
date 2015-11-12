@@ -8,5 +8,8 @@ public interface HospitalService {
 	
 	public List<User> executeStuff();
 	public String getRole();
+	
+	
+	public String getIndex();
 
 }
