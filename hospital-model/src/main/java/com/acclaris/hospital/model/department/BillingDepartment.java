@@ -13,12 +13,6 @@ public class BillingDepartment extends Department implements Serializable {
 	 */
 	private static final long serialVersionUID = -3389130833370988726L;
 
-	public BillingDepartment(){
-
-		this.departmentShifts = new ArrayList<Shift>();
-
-	}
-
 	public String getDepartmentId() {
 		return super.getDepartmentId();
 	}
@@ -36,11 +30,18 @@ public class BillingDepartment extends Department implements Serializable {
 	}
 
 	public List<Shift> getDepartmentShifts() {
-		return this.departmentShifts;
+		return super.getDepartmentShifts();
 	}
 
 	public void setDepartmentShifts(List<Shift> departmentShifts) {
-		this.departmentShifts = departmentShifts;
+		super.setDepartmentShifts(departmentShifts);
 	}
+
+	@Override
+	public String toString() {
+		return "BillingDepartment [getDepartmentId()=" + getDepartmentId() + ", getDepartmentName()="
+				+ getDepartmentName() + ", getDepartmentShifts()=" + getDepartmentShifts() + "]";
+	}
+	
 
 }
