@@ -14,19 +14,19 @@ import com.acclaris.hospital.service.HospitalService;
 
 @Controller
 public class HospitalManagementConroller {
-	
+
 	@Autowired
 	@Qualifier("hospitalService")
 	private HospitalService hospitalService;
-	
+
 	@RequestMapping(value="/", method=RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
-	public String getIndexPage(HttpServletRequest request, HttpServletResponse response){		
-		return hospitalService.getIndex();			
-	}	
-	
-	@RequestMapping(value="/welcome", method=RequestMethod.GET)
 	public String getWelcomePage(HttpServletRequest request, HttpServletResponse response){		
-		return "index";		
+		return "index";	
+	}	
+
+	@RequestMapping(value="/app/login", method=RequestMethod.GET)
+	public String getLoginModal(HttpServletRequest request, HttpServletResponse response){		
+		return "userLogin";		
 	}
 
 }
