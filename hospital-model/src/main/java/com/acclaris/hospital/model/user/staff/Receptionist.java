@@ -1,4 +1,4 @@
-package com.acclaris.hospital.model.user.admin;
+package com.acclaris.hospital.model.user.staff;
 
 import java.io.Serializable;
 
@@ -7,12 +7,12 @@ import com.acclaris.hospital.model.UserStatus;
 import com.acclaris.hospital.model.department.Department;
 import com.acclaris.hospital.model.role.UserRole;
 
-public class StaffAdmin extends Admin implements Serializable {
+public class Receptionist extends Staff implements Serializable {
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -1570441803425643917L;
+	private static final long serialVersionUID = 2307467751294569089L;
 	
 	public String getUserId() {
 		return super.getUserId();
@@ -105,18 +105,14 @@ public class StaffAdmin extends Admin implements Serializable {
 
 	@Override
 	public String toString() {
-		return "StaffAdmin [getUserId()=" + getUserId() + ", getPassword()=" + getPassword() + ", getFirstName()="
+		return "Receptionist [getUserId()=" + getUserId() + ", getPassword()=" + getPassword() + ", getFirstName()="
 				+ getFirstName() + ", getLastName()=" + getLastName() + ", getGender()=" + getGender()
 				+ ", getEmailId()=" + getEmailId() + ", getAddress()=" + getAddress() + ", getUserStatus()="
 				+ getUserStatus() + ", getUserRole()=" + getUserRole() + ", getDepartment()=" + getDepartment()
 				+ ", getBranchDetails()=" + getBranchDetails() + "]";
 	}
+	
+	
 
-	
-	
-	
-	
-	
-	
 
 }

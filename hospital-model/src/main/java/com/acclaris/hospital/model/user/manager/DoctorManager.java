@@ -3,6 +3,7 @@ package com.acclaris.hospital.model.user.manager;
 import java.io.Serializable;
 
 import com.acclaris.hospital.model.Branch;
+import com.acclaris.hospital.model.UserStatus;
 import com.acclaris.hospital.model.department.Department;
 import com.acclaris.hospital.model.role.UserRole;
 
@@ -12,6 +13,71 @@ public class DoctorManager extends Manager implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 6896937998095671162L;
+
+	public String getUserId() {
+		return super.getUserId();
+	}
+
+	public void setUserId(String userId) {
+		super.setUserId(userId);
+
+	}
+
+	public String getPassword() {
+		return super.getPassword();
+	}
+
+	public void setPassword(String password) {
+		super.setPassword(password);
+	}
+
+	public String getFirstName() {
+		return super.getFirstName();
+	}
+
+	public void setFirstName(String firstName) {
+		super.setFirstName(firstName);
+	}
+
+	public String getLastName() {
+		return super.getLastName();
+	}
+
+	public void setLastName(String lastName) {
+		super.setLastName(lastName);
+	}
+
+	public String getGender() {
+		return super.getGender();
+	}
+
+	public void setGender(String gender) {
+		super.setGender(gender);
+	}
+
+	public String getEmailId() {
+		return super.getEmailId();
+	}
+
+	public void setEmailId(String emailId) {
+		super.setEmailId(emailId);
+	}
+
+	public String getAddress() {
+		return super.getAddress();
+	}
+
+	public void setAddress(String address) {
+		super.setAddress(address);
+	}
+
+	public UserStatus getUserStatus() {
+		return super.getUserStatus();
+	}
+
+	public void setUserStatus(UserStatus userStatus) {
+		super.setUserStatus(userStatus);
+	}
 
 	public UserRole getUserRole() {
 		return super.getUserRole();
@@ -39,10 +105,15 @@ public class DoctorManager extends Manager implements Serializable {
 
 	@Override
 	public String toString() {
-		return "DoctorManager [getUserRole()=" + getUserRole() + ", getDepartment()=" + getDepartment()
+		return "DoctorManager [getUserId()=" + getUserId() + ", getPassword()=" + getPassword() + ", getFirstName()="
+				+ getFirstName() + ", getLastName()=" + getLastName() + ", getGender()=" + getGender()
+				+ ", getEmailId()=" + getEmailId() + ", getAddress()=" + getAddress() + ", getUserStatus()="
+				+ getUserStatus() + ", getUserRole()=" + getUserRole() + ", getDepartment()=" + getDepartment()
 				+ ", getBranchDetails()=" + getBranchDetails() + "]";
 	}
 
+
+	
 	
 	
 }
