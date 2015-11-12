@@ -28,7 +28,7 @@ public class HospitalManagementConroller {
 		return hospitalService.getIndex();			
 	}	
 	
-	@RequestMapping(value="/users", method=RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value="/welcome", method=RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
 	public @ResponseBody List<User> getWelcomePage(HttpServletRequest request, HttpServletResponse response){		
 		return hospitalService.executeStuff();		
 	}
