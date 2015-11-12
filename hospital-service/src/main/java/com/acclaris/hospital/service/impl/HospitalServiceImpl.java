@@ -20,4 +20,10 @@ public class HospitalServiceImpl implements HospitalService {
 		return null;
 	}
 
+	@Override
+	public String getIndex() {
+		// TODO Auto-generated method stub
+		return "index";
+	}
+
 }
