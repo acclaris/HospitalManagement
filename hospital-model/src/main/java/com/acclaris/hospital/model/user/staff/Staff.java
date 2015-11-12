@@ -1,126 +1,101 @@
-package com.acclaris.hospital.model.user;
+package com.acclaris.hospital.model.user.staff;
 
 import com.acclaris.hospital.model.Branch;
 import com.acclaris.hospital.model.UserStatus;
 import com.acclaris.hospital.model.department.Department;
-import com.acclaris.hospital.model.marker.User;
 import com.acclaris.hospital.model.role.UserRole;
+import com.acclaris.hospital.model.user.HospitalUser;
 
-public abstract class HospitalUser implements User {
-	
-	
-	private String userId;
-	
-	private transient String password;
-	
-	private String firstName;
-	
-	private String lastName;
-	
-	private String gender;
-	
-	private String emailId;
-	
-	private String address;
-	
-	private UserStatus userStatus;
-	
-	private UserRole userRole;
-	
-	private Department department;
-	
-	private Branch branchDetails;
+public abstract class Staff extends HospitalUser {
 
 	protected String getUserId() {
-		return userId;
+		return super.getUserId();
 	}
 
 	protected void setUserId(String userId) {
-		this.userId = userId;
+		super.setUserId(userId);
+
 	}
 
 	protected String getPassword() {
-		return password;
+		return super.getPassword();
 	}
 
 	protected void setPassword(String password) {
-		this.password = password;
+		super.setPassword(password);
 	}
 
 	protected String getFirstName() {
-		return firstName;
+		return super.getFirstName();
 	}
 
 	protected void setFirstName(String firstName) {
-		this.firstName = firstName;
+		super.setFirstName(firstName);
 	}
 
 	protected String getLastName() {
-		return lastName;
+		return super.getLastName();
 	}
 
 	protected void setLastName(String lastName) {
-		this.lastName = lastName;
+		super.setLastName(lastName);
 	}
 
 	protected String getGender() {
-		return gender;
+		return super.getGender();
 	}
 
 	protected void setGender(String gender) {
-		this.gender = gender;
+		super.setGender(gender);
 	}
 
 	protected String getEmailId() {
-		return emailId;
+		return super.getEmailId();
 	}
 
 	protected void setEmailId(String emailId) {
-		this.emailId = emailId;
+		super.setEmailId(emailId);
 	}
 
 	protected String getAddress() {
-		return address;
+		return super.getAddress();
 	}
 
 	protected void setAddress(String address) {
-		this.address = address;
+		super.setAddress(address);
 	}
 
 	protected UserStatus getUserStatus() {
-		return userStatus;
+		return super.getUserStatus();
 	}
 
 	protected void setUserStatus(UserStatus userStatus) {
-		this.userStatus = userStatus;
+		super.setUserStatus(userStatus);
 	}
 
 	protected UserRole getUserRole() {
-		return userRole;
+		return super.getUserRole();
 	}
 
 	protected void setUserRole(UserRole userRole) {
-		this.userRole = userRole;
+		super.setUserRole(userRole);
 	}
 
 	protected Department getDepartment() {
-		return department;
+		return super.getDepartment();
 	}
 
 	protected void setDepartment(Department department) {
-		this.department = department;
+		super.setDepartment(department);
 	}
 
 	protected Branch getBranchDetails() {
-		return branchDetails;
+		return super.getBranchDetails();
 	}
 
 	protected void setBranchDetails(Branch branchDetails) {
-		this.branchDetails = branchDetails;
+		super.setBranchDetails(branchDetails);
 	}
 
-	
-	
-	
 
 }
