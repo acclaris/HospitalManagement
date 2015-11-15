@@ -12,6 +12,6 @@
 
 <import resource="classpath*:/hospital-dao-context.xml" />
 
-<bean id="hospitalService" class="com.acclaris.hospital.service.impl.HospitalServiceImpl" />
+
 
 </beans>

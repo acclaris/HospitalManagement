@@ -8,11 +8,34 @@ import com.acclaris.hospital.model.role.UserRole;
 public abstract class StaffRole extends UserRole {
 
 
-	protected List<Functionality> getFunctionalities() {
+	public String getRoleId() {
+		return super.getRoleId();
+	}
+	public void setRoleId(String roleId) {
+		super.setRoleId(roleId);
+	}
+
+	public String getShortCode() {
+		return super.getShortCode();
+	}
+
+	public void setShortCode(String shortCode) {
+		super.setShortCode(shortCode);
+	}
+
+	public String getRoleDescription() {
+		return super.getRoleDescription();
+	}
+
+	public void setRoleDescription(String roleDescription) {
+		super.setRoleDescription(roleDescription);
+	}
+	
+	public List<Functionality> getFunctionalities() {
 		return super.getFunctionalities();
 	}
 
-	protected void setFunctionalities(List<Functionality> functionalities) {
+	public void setFunctionalities(List<Functionality> functionalities) {
 		super.setFunctionalities(functionalities);
 	}
 

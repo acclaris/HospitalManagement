@@ -4,9 +4,9 @@ $(document).ready(function(){
 		type : "iframe",
 		href : "app/login",
 		padding : 5,
-		'width':parseInt($(window).width() * 0.25),
-		'height':parseInt($(window).height() * 0.9),
-		'autoScale':true,
+		width:parseInt($(window).width() * 0.6),
+		height:parseInt($(window).height() * 2),
+		autoScale:true,
 		helpers : {
 			title: {
 				type: 'inside',
