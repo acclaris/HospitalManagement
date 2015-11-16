@@ -3,6 +3,7 @@ package com.acclaris.hospital.service.impl;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
@@ -16,6 +17,7 @@ import com.acclaris.hospital.model.user.HospitalUser;
 
 public class HospitalUserDetailsServiceImpl implements UserDetailsService{
 
+	@Autowired
 	private HospitalUserDetailsDAO hospitalUserDetailsDAO;
 
 	public void setHospitalUserDetailsDAO(HospitalUserDetailsDAO hospitalUserDetailsDAO) {

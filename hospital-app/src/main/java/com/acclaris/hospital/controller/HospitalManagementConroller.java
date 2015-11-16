@@ -15,7 +15,7 @@ public class HospitalManagementConroller {
 		return "index";	
 	}	
 
-	@RequestMapping(value="/login", method=RequestMethod.GET)
+	@RequestMapping(value="/app/login", method=RequestMethod.GET)
 	public String getLoginModal(HttpServletRequest request, HttpServletResponse response){	
 		return "userLogin";		
 	}
@@ -23,11 +23,11 @@ public class HospitalManagementConroller {
 	@RequestMapping(value="/success", method=RequestMethod.GET)
 	public String getLoginSuccessView(HttpServletRequest request, HttpServletResponse response){	
 		System.out.println("IN SUCCESS");
-		return "success";		
+		return "redirect:successLogin";		
 	}
 	@RequestMapping(value="/error", method=RequestMethod.GET)
 	public String getLoginErrorView(HttpServletRequest request, HttpServletResponse response){	
-		return "error";		
+		return "errorLogin";		
 	}
 	
 

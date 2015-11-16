@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 	$("#login-user").fancybox({
 		type : "iframe",
-		href : "login",
+		href : "app/login",
 		padding : 5,
 		width:parseInt($(window).width() * 0.6),
 		height:parseInt($(window).height() * 2),
@@ -23,11 +23,12 @@ $(document).ready(function(){
 		prevEffect: 'fade'
 	});
 
+
 });
 
 function closeFancyBox(objToClose, objToOpen){
-	
-	parent.$.fancybox.close();
-	parent.$(objToOpen).click();
-	
+
+	window.parent.$.fancybox.close();
+	window.parent.$(objToOpen).click();
+
 }

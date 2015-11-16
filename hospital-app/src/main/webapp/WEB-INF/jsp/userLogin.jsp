@@ -28,13 +28,14 @@
 <body>
 
 
+	<div class="error">Invalid username or password</div>
+	
 	<div class="page-container">
 
 		<br /> <span class="form-title">LOGIN</span>
 		<div class="form-container">
 			<div id="login-form-container" class="inner-form-container">
-				<form id="user-login"
-					action="j_spring_security_check" method="post">
+				<form id="user-login" action="j_spring_security_check" method="post">
 					<br /> <input type="text" id="username" class="username"
 						name="username" placeholder="Username" required /> <span
 						class="tooltip">Username cannot be blank</span> <input
@@ -66,10 +67,10 @@
 			</div>
 		</div>
 
-		<div></div>
 
 	</div>
 
+	<div class="modal"></div>
 
 	<!-- Javascript -->
 	<script src="/assets/js/jquery-1.8.2.min.js"></script>

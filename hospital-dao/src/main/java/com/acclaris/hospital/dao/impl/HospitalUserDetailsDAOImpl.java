@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
@@ -14,12 +15,8 @@ import com.acclaris.hospital.model.user.HospitalUser;
 
 public class HospitalUserDetailsDAOImpl implements HospitalUserDetailsDAO {
 
+	@Autowired
 	private NamedParameterJdbcTemplate jdbcTemplate;
-	
-	public void setJdbcTemplate(NamedParameterJdbcTemplate jdbcTemplate) {
-		this.jdbcTemplate = jdbcTemplate;
-	}
-
 
 	private String userDetailsSql;
 
