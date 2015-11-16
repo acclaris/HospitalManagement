@@ -6,11 +6,11 @@ import com.acclaris.hospital.model.Shift;
 
 public abstract class Department {
 	
-	protected String departmentId;
+	private String departmentId;
 	
-	protected String departmentName;
+	private String departmentName;
 	
-	protected List<Shift> departmentShifts;
+	private List<Shift> departmentShifts;
 
 	protected String getDepartmentId() {
 		return this.departmentId;
