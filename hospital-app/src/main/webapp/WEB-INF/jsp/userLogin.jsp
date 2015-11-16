@@ -34,7 +34,7 @@
 		<div class="form-container">
 			<div id="login-form-container" class="inner-form-container">
 				<form id="user-login"
-					action="" method="post">
+					action="j_spring_security_check" method="post">
 					<br /> <input type="text" id="username" class="username"
 						name="username" placeholder="Username" required /> <span
 						class="tooltip">Username cannot be blank</span> <input

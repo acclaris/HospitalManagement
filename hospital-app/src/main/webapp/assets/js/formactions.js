@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 	$("#login-user").fancybox({
 		type : "iframe",
-		href : "app/login",
+		href : "login",
 		padding : 5,
 		width:parseInt($(window).width() * 0.6),
 		height:parseInt($(window).height() * 2),

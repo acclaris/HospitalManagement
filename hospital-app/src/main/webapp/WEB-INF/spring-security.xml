@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.0.xsd">
+
+	<import resource="classpath*:/hospital-service-context.xml" />
+
+	<bean id="passwordEncoder"
+		class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
+		<constructor-arg name="strength" value="10" />
+	</bean>
+
+	<context:property-placeholder
+		location="classpath:/hospital_mgmt_master.properties" />
+
+	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName" value="java:comp/env/HospitalManagement" />
+	</bean>
+
+	<bean id="jdbcTemplate"
+		class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
+		<constructor-arg ref="dataSource" />
+	</bean>
+
+	<bean id="hospitalUserDetailsDAO"
+		class="com.acclaris.hospital.dao.impl.HospitalUserDetailsDAOImpl">
+		<property name="userDetailsSql" value="${hospital.db.select.user.details.sql}" />
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+
+	<bean id="hospitalUserDetailService"
+		class="com.acclaris.hospital.service.impl.HospitalUserDetailsServiceImpl">
+
+		<property name="hospitalUserDetailsDAO" ref="hospitalUserDetailsDAO" />
+	</bean>
+
+
+
+	<bean id="authProvider"
+		class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">
+		<property name="userDetailsService" ref="hospitalUserDetailService" />
+		<property name="passwordEncoder" ref="passwordEncoder" />
+		<property name="hideUserNotFoundExceptions" value="false" />
+	</bean>
+
+	<security:authentication-manager alias="authentication-manager">
+		<security:authentication-provider
+			ref="authProvider" />
+	</security:authentication-manager>
+
+
+	<security:http pattern="/login" security="none" />
+	<security:http pattern="/error" security="none" />
+	<security:http pattern="/success" security="none" />
+	<!-- <security:http pattern="/login/forgotpassword" security="none" /> <security:http 
+		pattern="/login/sendpassword" security="none" /> <security:http pattern="/rs/**" 
+		security="none" /> <security:http pattern="/endsession" security="none" /> 
+		<security:http pattern="/resources/**" security="none" /> <security:http 
+		pattern="/healthcheck/**" security="none" /> -->
+
+
+	<security:http use-expressions="true" auto-config="false"
+		disable-url-rewriting="false" create-session="always">
+		<security:intercept-url pattern="/error" 
+			access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<security:intercept-url pattern="/success"
+			access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<security:form-login login-page="/login"
+			login-processing-url="/j_spring_security_check" default-target-url="/success"
+			authentication-failure-handler-ref="authenticationFailureHandler" />
+
+		<security:custom-filter ref="authenticationFilter"
+			before="FORM_LOGIN_FILTER" />
+		<!-- <security:logout logout-url="/logout" delete-cookies="JSESSIONID" 
+			success-handler-ref="logoutSuccessHandler" invalidate-session="true" /> <security:session-management 
+			session-fixation-protection="newSession" /> <security:custom-filter ref="authenticationFilter" 
+			before="FORM_LOGIN_FILTER" /> <security:access-denied-handler error-page="/login" 
+			/> -->
+		<security:access-denied-handler
+			error-page="/login" />
+		<security:csrf disabled="true" />
+	</security:http>
+
+	<bean name="authenticationFailureHandler"
+		class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
+		<property name="defaultFailureUrl" value="/error" />
+	</bean>
+	<bean name="authenticationFilter"
+		class="com.acclaris.hospital.authentication.filter.HospitalUserAuthenticationFilter">
+		<property name="authenticationManager" ref="authentication-manager" />
+		<property name="filterProcessesUrl" value="/j_spring_security_check" />
+		<property name="authenticationFailureHandler" ref="authenticationFailureHandler"/>
+		<property name="allowSessionCreation" value="true" />
+
+	</bean>
+</beans>

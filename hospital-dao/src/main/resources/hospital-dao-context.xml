@@ -7,10 +7,10 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd">
 
-	<context:property-placeholder location="classpath*:/hospital_mgmt_master.properties" />
+	<context:property-placeholder location="classpath:/hospital_mgmt_master.properties" />
 	
 	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
-		<property name="jndiName" value="java:comp/env/HospitalDB" />
+		<property name="jndiName" value="java:comp/env/HospitalManagement" />
 	</bean>
 
 	<bean id="jdbcTemplate"
@@ -21,11 +21,7 @@
 	<bean id="hospitalUserDetailsDAO"
 		class="com.acclaris.hospital.dao.impl.HospitalUserDetailsDAOImpl">
 		<property name="userDetailsSql" value="${hospital.db.select.user.details.sql}" />
-		<!-- <property name="updateSql" value="${url.shortener.db.update.sql}" 
-			/> <property name="selectSql" value="${url.shortener.db.select.sql}" /> <property 
-			name="selectUrlSql" value="${url.shortener.db.select.url.sql}" /> <property 
-			name="updateLastAccessedSql" value="${url.shortener.db.update.lastaccessed.sql}" 
-			/> -->
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
 	</bean>
 
 </beans>

@@ -16,8 +16,8 @@ public class UserDetailRowMapper implements RowMapper<HospitalUser> {
 		if(rs!=null && !rs.isBeforeFirst()){
 			hospitalUserDetails.setFirstName(rs.getString("FIRST_NAME"));
 			hospitalUserDetails.setLastName(rs.getString("LAST_NAME"));
-			hospitalUserDetails.setPassword(rs.getString("USER_PASSWORD"));
-			hospitalUserDetails.setEmailId(rs.getString("EMAIl_ID"));
+			hospitalUserDetails.setPassword(rs.getString("USR_PASSWORD"));
+			hospitalUserDetails.setEmailId(rs.getString("EMAIL_ID"));
 
 		}
 		return hospitalUserDetails;

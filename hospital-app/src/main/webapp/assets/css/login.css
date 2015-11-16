@@ -13,7 +13,7 @@ form {
 	width: 400px;
 	margin-top: 5%;
 	position: relative;
-	margin-left: -32.5%;
+	margin-left: -29.5%;
 }
 
 input {
@@ -156,7 +156,7 @@ button[type="submit"]:active {
 	background: transparent url("../img/divider.png") no-repeat scroll 0px
 		-69px;
 	position: absolute;
-	margin-left: -132px;
+	margin-left: -123px;
 	vertical-align: middle;
 	margin-top: 28px;
 }

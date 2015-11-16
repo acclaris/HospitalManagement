@@ -39,12 +39,12 @@ img#sitelogo {
 	top: 3%;
 }
 
-img#book-anim {
+img#plus{
 	width: 24px;
 	height: 24px;
 	position: absolute;
-	left: 17.9%;
-	top: 6.7%;
+	left: 18.5%;
+	top: 6.3%;
 	margin-left: 22px;
 }
 
@@ -60,7 +60,7 @@ img#book-anim {
 
 
 .word-spacing {
-	top: 12%;
+	top: 10%;
 }
 
 .site-text-color-top{
