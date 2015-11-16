@@ -29,5 +29,11 @@ public class HospitalManagementConroller {
 	public String getLoginErrorView(HttpServletRequest request, HttpServletResponse response){	
 		return "error";		
 	}
+	
+
+	@RequestMapping(value="/test", method=RequestMethod.GET)
+	public String getTestIndexPage(){		
+		return "index";			
+	}
 
 }
