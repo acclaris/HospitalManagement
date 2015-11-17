@@ -1,4 +1,4 @@
-package com.acclaris.hospital.comtroller;
+/*package com.acclaris.hospital.comtroller;
 
 import static junit.framework.Assert.assertEquals;
 
@@ -54,4 +54,4 @@ public class HospitalManagementConrollerTest {
 
 	}
 
-}
+}*/
