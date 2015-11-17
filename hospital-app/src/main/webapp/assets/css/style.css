@@ -1,8 +1,10 @@
 @font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Open Sans Light'), local('OpenSans-Light'), url("/assets/fonts/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff") format('woff');
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Open Sans Light'), local('OpenSans-Light'),
+		url("/assets/fonts/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff")
+		format('woff');
 }
 
 @font-face {
@@ -21,7 +23,6 @@ body {
 	font-weight: 300;
 	line-height: 1.5em;
 	text-align: center;
-	
 }
 
 h1 {
@@ -36,39 +37,56 @@ img#sitelogo {
 	height: 96px;
 	position: absolute;
 	left: 3%;
-	top: 3%;
+	top: 2%;
 }
 
-img#plus{
-	width: 24px;
-	height: 24px;
-	position: absolute;
-	left: 18.5%;
-	top: 6.3%;
-	margin-left: 22px;
+@media only screen and (max-width: 1280px) {
+	img#plus {
+		width: 24px;
+		height: 24px;
+		position: absolute;
+		left: 18.5%;
+		top: 6.3%;
+		margin-left: 22px;
+	}
+}
+
+@media only screen and (max-width: 1368px) {
+	img#plus {
+		width: 24px;
+		height: 24px;
+		position: absolute;
+		margin-left: 22px;
+		left: 18%;
+		top: 6.8%;
+	}
+}
+
+#masthead {
+	background-image: url("../img/masthead-background.png");
+	height: 8.2rem;
+	background-repeat: repeat-x;
 }
 
 .site-text-container {
 	font-family: sitefont;
-	font-weight:bold;
+	font-weight: bold;
 	font-size: 40px;
 	position: absolute;
 	top: 6%;
 	left: 11%;
 }
 
-
-
 .word-spacing {
-	top: 10%;
+	top: 12.2%;
 }
 
-.site-text-color-top{
+.site-text-color-top {
 	color: #ff0000;
 }
 
-.site-text-color-bottom{
-	color : #effa1f;
+.site-text-color-bottom {
+	color: #effa1f;
 }
 
 .box {
@@ -86,7 +104,7 @@ img#plus{
 	padding: 0px;
 	text-transform: uppercase;
 	height: 40px;
-	font-family:sitefont;
+	font-family: sitefont;
 	font-weight: bold;
 	word-spacing: 0.3rem;
 	cursor: pointer;
@@ -98,8 +116,8 @@ img#plus{
 }
 
 a#login-box {
-	font-size : 13px;
-	padding-top:5px; 
+	font-size: 13px;
+	padding-top: 5px;
 }
 
 .btn-border.color-1:active, .btn-border.color-1:hover {
@@ -110,13 +128,12 @@ a#login-box {
 	background-color: #426FC5;
 }
 
-
-
 .btn-border.color-1 {
 	background-color: transparent;
 	border: 3px solid #00ff00;
 	color: #ff0000;
 }
+
 .btn-round {
 	border-radius: 10em;
 }
@@ -139,36 +156,3 @@ a#login-box {
 	display: flex;
 	margin: 5px auto auto 36px;
 }
-
-.fancybox-title {
-	padding: 0 0 10px 0 !important;
-	font-weight: bold !important;
-	text-align: center !important;
-	font-size: 18px !important;
-	text-decoration: underline !important;
-}
-
-.fancybox-title-inside-wrap {
-	padding-top: 7px !important;
-	font-weight: bold !important;
-	text-align: center !important;
-	margin: -10px !important;
-}
-
-.fancybox-close {
-	position: absolute !important;
-	top: -16px !important;
-	right: -16px !important;
-	width: 36px !important;
-	height: 36px !important;
-	cursor: pointer !important;
-	z-index: 9000 !important;
-	left: 98% !important;
-}
-
-.fancybox-skin {
-	border:1px solid;
-}
-
-
-

@@ -1,4 +1,4 @@
-package com.acclaris.hospital.comtroller;
+/*package com.acclaris.hospital.comtroller;
 import org.mockito.Mockito;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
@@ -16,4 +16,4 @@ public class TestContext {
     public HospitalService hospitalService() {
         return Mockito.mock(HospitalService.class);
     }
-}
+}*/

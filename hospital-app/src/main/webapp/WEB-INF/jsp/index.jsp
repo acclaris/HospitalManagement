@@ -24,7 +24,13 @@
 
 <body>
 	<div class="wrapper">
-		<jsp:include page="header.jsp" />
+		<div>
+			<img src="assets/img/sitelogo.png" id="sitelogo" />
+		</div>
+
+		<div class="site-text-container site-text-color-top">Super</div>
+		<div class="site-text-container word-spacing site-text-color-bottom">Medica</div>
+		<img id="plus" src="assets/img/healthcare-icon.png" />
 
 		<div class="button-container">
 
@@ -54,7 +60,7 @@
 			class="form-title">LOGIN</span>
 		<div class="form-container">
 			<div id="login-form-container" class="inner-form-container">
-				<form id="user-login" action="/j_spring_security_check" method="post">
+				<form id="user-login" action="j_spring_security_check" method="post">
 					<br /> <input type="text" id="username" class="username"
 						name="username" placeholder="Username" required /> <span
 						class="tooltip">Username cannot be blank</span> <input
@@ -66,6 +72,7 @@
 					<br /> <br />
 				</form>
 			</div>
+
 		</div>
 
 		<div class="divider-container divider"></div>
@@ -88,10 +95,12 @@
 
 
 	</div>
+
 	<!-- Javascript -->
-<!-- 	<script src="assets/js/jquery-1.8.2.min.js"></script>
-	<script src="assets/js/jquery-1.10.2.min.js"></script> -->
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script src="assets/js/jquery-1.8.2.min.js"></script>
+	<script src="assets/js/jquery-1.10.2.min.js"></script>
+	<!-- 	<script type="text/javascript"
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script> -->
 	<script src="assets/js/supersized.3.2.7.min.js"></script>
 	<script src="assets/js/supersized-init.js"></script>
 	<script src="assets/js/scripts.js"></script>

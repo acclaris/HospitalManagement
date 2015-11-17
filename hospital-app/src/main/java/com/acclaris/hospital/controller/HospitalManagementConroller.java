@@ -16,7 +16,7 @@ public class HospitalManagementConroller {
 	public String getWelcomePage(HttpServletRequest request, HttpServletResponse response){		
 		return "index";	
 	}	
-	
+
 	@RequestMapping(value="/home", method=RequestMethod.GET)
 	public String getHomePage(HttpServletRequest request, HttpServletResponse response){		
 		return "home";	
@@ -35,9 +35,9 @@ public class HospitalManagementConroller {
 	@RequestMapping(value="/error", method=RequestMethod.GET)
 	@ExceptionHandler(value=UsernameNotFoundException.class)
 	public String getLoginErrorView(HttpServletRequest request, HttpServletResponse response){	
-		return "errorLogin";		
+		return "/errorLogin";
 	}
-	
+
 
 	@RequestMapping(value="/test", method=RequestMethod.GET)
 	public String getTestIndexPage(){		

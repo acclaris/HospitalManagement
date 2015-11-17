@@ -4,26 +4,21 @@
 	background: #FFF none repeat scroll 0% 0%;
 	justify-content: space-around;
 	overflow: hidden;
-	width: 55%;
+	width: 51%;
 	display: none;
 	height: auto;
 	margin: auto;
 	position: fixed;
 	z-index: 99999;
-	left: 25%;
-	top: 25%;
+	left: 23%;
 	box-shadow: 0px 0px 20px #999;
-	-moz-box-shadow: 0px 0px 20px #999; /* Firefox */
-	-webkit-box-shadow: 0px 0px 20px #999; /* Safari, Chrome */
-	border-radius: 3px 3px 3px 3px;
-	-moz-border-radius: 3px; /* Firefox */
-	-webkit-border-radius: 3px;
-	top: 25%; /* Safari, Chrome */
+	border-radius: 3px;
+	top: 25%;
 }
 
 form {
 	width: 400px;
-	margin-top: 10%;
+	margin-top: 3%;
 	position: relative;
 	margin-left: -58.5%;
 	margin-bottom: -40px;
@@ -81,7 +76,7 @@ button[type="submit"], button[type="button"] {
 	cursor: pointer;
 	width: 46%;
 	height: 42px;
-	margin-left: 12px;
+	margin-left: -16px;
 	margin-top: 20px;
 	padding: 0;
 	background: #ef4300;
@@ -301,7 +296,7 @@ input:hover:valid+.tooltip {
 .form-title {
 	font-weight: bold;
 	font-size: 18px;
-	margin: 22px 119px -9px -19px;
+	margin: 22px 125px -9px -19px;
 	font-family: sans-serif;
 }
 
@@ -358,18 +353,23 @@ a#forgot-password:active, a#forgot-password:hover {
 	background-image: url("../img/emergency.png");
 }
 
-.error {
+.errorinfo {
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 11px;
+	font-size: 12px;
 	border: 1px solid;
-	margin: 10px 0px;
-	padding: 15px 10px 15px 50px;
+	margin: 23px 489px -27px -22px;
 	background-repeat: no-repeat;
 	background-position: 10px center;
 	color: #D8000C;
 	background-color: #FFBABA;
-	background-image: url('../img/error.png');
-	display: none;
+	background-image: url("../img/error.png");
+	display: block;
+	width: 35%;
+	height: 26px;
+	padding-top: 0rem;
+	padding-left: 2rem;
+	border-radius: 0px;
+	text-align: left;
 }
 
 #mask {
@@ -381,19 +381,32 @@ a#forgot-password:active, a#forgot-password:hover {
 	z-index: 10;
 	width: 100%;
 	height: 100%;
-	background: rgba(20, 30, 40, 0.3);
+	background: rgba(20, 30, 40, 0.6);
 	z-index: 999;
 }
 
-img.btn_close {
-	position: fixed;
-	right: 0rem;
-	width: 36px;
-	height: 36px;
-	cursor: pointer;
-	z-index: 9000;
-	top: 12.8rem;
-	left: 62.8rem;
+@media only screen and (max-width: 1280px) {
+	img.btn_close {
+		position: fixed;
+		width: 36px;
+		height: 36px;
+		cursor: pointer;
+		z-index: 9000;
+		top: 12.8rem;
+		left: 62.8rem;
+	}
+}
+
+@media only screen and (max-width: 1368px) {
+	img.btn_close {
+		position: fixed;
+		width: 36px;
+		height: 36px;
+		cursor: pointer;
+		z-index: 9000;
+		top: 8.7rem;
+		left: 62.1rem;
+	}
 }
 
 .login-window {
