@@ -8,92 +8,92 @@ import com.acclaris.hospital.model.user.HospitalUser;
 
 public abstract class Manager extends HospitalUser {
 
-	protected String getUserId() {
+	public String getUserId() {
 		return super.getUserId();
 	}
 
-	protected void setUserId(String userId) {
+	public void setUserId(String userId) {
 		super.setUserId(userId);
 
 	}
 
-	protected String getPassword() {
+	public String getPassword() {
 		return super.getPassword();
 	}
 
-	protected void setPassword(String password) {
+	public void setPassword(String password) {
 		super.setPassword(password);
 	}
 
-	protected String getFirstName() {
+	public String getFirstName() {
 		return super.getFirstName();
 	}
 
-	protected void setFirstName(String firstName) {
+	public void setFirstName(String firstName) {
 		super.setFirstName(firstName);
 	}
 
-	protected String getLastName() {
+	public String getLastName() {
 		return super.getLastName();
 	}
 
-	protected void setLastName(String lastName) {
+	public void setLastName(String lastName) {
 		super.setLastName(lastName);
 	}
 
-	protected String getGender() {
+	public String getGender() {
 		return super.getGender();
 	}
 
-	protected void setGender(String gender) {
+	public void setGender(String gender) {
 		super.setGender(gender);
 	}
 
-	protected String getEmailId() {
+	public String getEmailId() {
 		return super.getEmailId();
 	}
 
-	protected void setEmailId(String emailId) {
+	public void setEmailId(String emailId) {
 		super.setEmailId(emailId);
 	}
 
-	protected String getAddress() {
+	public String getAddress() {
 		return super.getAddress();
 	}
 
-	protected void setAddress(String address) {
+	public void setAddress(String address) {
 		super.setAddress(address);
 	}
 
-	protected UserStatus getUserStatus() {
+	public UserStatus getUserStatus() {
 		return super.getUserStatus();
 	}
 
-	protected void setUserStatus(UserStatus userStatus) {
+	public void setUserStatus(UserStatus userStatus) {
 		super.setUserStatus(userStatus);
 	}
 
-	protected UserRole getUserRole() {
+	public UserRole getUserRole() {
 		return super.getUserRole();
 	}
 
-	protected void setUserRole(UserRole userRole) {
+	public void setUserRole(UserRole userRole) {
 		super.setUserRole(userRole);
 	}
 
-	protected Department getDepartment() {
+	public Department getDepartment() {
 		return super.getDepartment();
 	}
 
-	protected void setDepartment(Department department) {
+	public void setDepartment(Department department) {
 		super.setDepartment(department);
 	}
 
-	protected Branch getBranchDetails() {
+	public Branch getBranchDetails() {
 		return super.getBranchDetails();
 	}
 
-	protected void setBranchDetails(Branch branchDetails) {
+	public void setBranchDetails(Branch branchDetails) {
 		super.setBranchDetails(branchDetails);
 	}
 
