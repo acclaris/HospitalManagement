@@ -23,15 +23,15 @@ $(document).ready(function() {
 			return false;
 		}
 
-/*		else if(username!='' && password!=''){
+		/*		else if(username!='' && password!=''){
 
 			$('body').addClass("loading");
 			$('body', window.parent.document).css('pointer-events','none');
 
 			var formData = $(this).serializeObject();
-			
+
 			alert(window.location.pathname.substring(0, window.location.pathname.indexOf("/",2)));
-			
+
 			$.ajax({
 				type: 'POST',
 				url:  window.location.pathname.substring(0, window.location.pathname.indexOf("/",2))+'/j_spring_security_check',
@@ -55,6 +55,41 @@ $(document).ready(function() {
 			})
 
 		}*/
+
+	});
+
+	$('a.login-window').click(function() {
+
+		// Getting the variable's value from a link 
+		var loginBox = $(this).attr('href');
+
+		//Fade in the Popup and add close button
+		$(loginBox).fadeIn(300);
+
+		/*//Set the center alignment padding + border
+		var popMargTop = ($(loginBox).height() + 24) / 2; 
+		var popMargLeft = ($(loginBox).width() + 24) / 2; 
+
+		$(loginBox).css({ 
+			'margin-top' : -popMargTop,
+			'margin-left' : -popMargLeft
+		});*/
+		
+		$(loginBox).css("display","flex");
+
+		// Add the mask to body
+		$('.wrapper').append('<div id="mask"></div>');
+		$('#mask').fadeIn(300);
+
+		return false;
+	});
+
+	// When clicking on the button close or the mask layer the popup closed
+	$('a.close, .wrapper').click(function() { 
+		$('#mask , .page-container').fadeOut(300 , function() {
+			$('#mask').remove();  
+		}); 
+		return false;
 	});
 
 
