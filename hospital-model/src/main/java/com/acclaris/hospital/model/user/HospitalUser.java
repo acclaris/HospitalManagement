@@ -31,91 +31,91 @@ public abstract class HospitalUser implements User {
 	
 	private Branch branchDetails;
 
-	protected String getUserId() {
+	public String getUserId() {
 		return userId;
 	}
 
-	protected void setUserId(String userId) {
+	public void setUserId(String userId) {
 		this.userId = userId;
 	}
 
-	protected String getPassword() {
+	public String getPassword() {
 		return password;
 	}
 
-	protected void setPassword(String password) {
+	public void setPassword(String password) {
 		this.password = password;
 	}
 
-	protected String getFirstName() {
+	public String getFirstName() {
 		return firstName;
 	}
 
-	protected void setFirstName(String firstName) {
+	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
 
-	protected String getLastName() {
+	public String getLastName() {
 		return lastName;
 	}
 
-	protected void setLastName(String lastName) {
+	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
 
-	protected String getGender() {
+	public String getGender() {
 		return gender;
 	}
 
-	protected void setGender(String gender) {
+	public void setGender(String gender) {
 		this.gender = gender;
 	}
 
-	protected String getEmailId() {
+	public String getEmailId() {
 		return emailId;
 	}
 
-	protected void setEmailId(String emailId) {
+	public void setEmailId(String emailId) {
 		this.emailId = emailId;
 	}
 
-	protected String getAddress() {
+	public String getAddress() {
 		return address;
 	}
 
-	protected void setAddress(String address) {
+	public void setAddress(String address) {
 		this.address = address;
 	}
 
-	protected UserStatus getUserStatus() {
+	public UserStatus getUserStatus() {
 		return userStatus;
 	}
 
-	protected void setUserStatus(UserStatus userStatus) {
+	public void setUserStatus(UserStatus userStatus) {
 		this.userStatus = userStatus;
 	}
 
-	protected UserRole getUserRole() {
+	public UserRole getUserRole() {
 		return userRole;
 	}
 
-	protected void setUserRole(UserRole userRole) {
+	public void setUserRole(UserRole userRole) {
 		this.userRole = userRole;
 	}
 
-	protected Department getDepartment() {
+	public Department getDepartment() {
 		return department;
 	}
 
-	protected void setDepartment(Department department) {
+	public void setDepartment(Department department) {
 		this.department = department;
 	}
 
-	protected Branch getBranchDetails() {
+	public Branch getBranchDetails() {
 		return branchDetails;
 	}
 
-	protected void setBranchDetails(Branch branchDetails) {
+	public void setBranchDetails(Branch branchDetails) {
 		this.branchDetails = branchDetails;
 	}
 

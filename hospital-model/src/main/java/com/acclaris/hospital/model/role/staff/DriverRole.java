@@ -11,7 +11,30 @@ public class DriverRole extends StaffRole implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 4072788476301009562L;
-	
+
+	public String getRoleId() {
+		return super.getRoleId();
+	}
+	public void setRoleId(String roleId) {
+		super.setRoleId(roleId);
+	}
+
+	public String getShortCode() {
+		return super.getShortCode();
+	}
+
+	public void setShortCode(String shortCode) {
+		super.setShortCode(shortCode);
+	}
+
+	public String getRoleDescription() {
+		return super.getRoleDescription();
+	}
+
+	public void setRoleDescription(String roleDescription) {
+		super.setRoleDescription(roleDescription);
+	}
+
 	public List<Functionality> getFunctionalities() {
 		return super.getFunctionalities();
 	}
@@ -19,18 +42,21 @@ public class DriverRole extends StaffRole implements Serializable {
 	public void setFunctionalities(List<Functionality> functionalities) {
 		super.setFunctionalities(functionalities);
 	}
-
-
+	
+	
 	@Override
 	public boolean isFunctionalityInRole(Functionality functionality) {
 		// TODO Auto-generated method stub
 		return false;
 	}
-
-
 	@Override
 	public String toString() {
-		return "DriverRole [functionalities=" + getFunctionalities()!=null? getFunctionalities().toString():null + "]";
+		return "DriverRole [getRoleId()=" + getRoleId() + ", getShortCode()="
+				+ getShortCode() + ", getRoleDescription()="
+				+ getRoleDescription() + ", getFunctionalities()="
+				+ getFunctionalities() + "]";
 	}
+
+
 
 }

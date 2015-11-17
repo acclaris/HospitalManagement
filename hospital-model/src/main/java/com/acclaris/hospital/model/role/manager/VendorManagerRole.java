@@ -13,7 +13,29 @@ public class VendorManagerRole extends ManagerRole implements Serializable {
 	 */
 	private static final long serialVersionUID = 1484439652271043104L;
 
-	
+	public String getRoleId() {
+		return super.getRoleId();
+	}
+	public void setRoleId(String roleId) {
+		super.setRoleId(roleId);
+	}
+
+	public String getShortCode() {
+		return super.getShortCode();
+	}
+
+	public void setShortCode(String shortCode) {
+		super.setShortCode(shortCode);
+	}
+
+	public String getRoleDescription() {
+		return super.getRoleDescription();
+	}
+
+	public void setRoleDescription(String roleDescription) {
+		super.setRoleDescription(roleDescription);
+	}
+
 	public List<Functionality> getFunctionalities() {
 		return super.getFunctionalities();
 	}
@@ -27,12 +49,15 @@ public class VendorManagerRole extends ManagerRole implements Serializable {
 		// TODO Auto-generated method stub
 		return false;
 	}
-
-
 	@Override
 	public String toString() {
-		return "VendorManagerRole [functionalities=" + getFunctionalities()!=null? getFunctionalities().toString():null + "]";
+		return "VendorManagerRole [getRoleId()=" + getRoleId()
+				+ ", getShortCode()=" + getShortCode()
+				+ ", getRoleDescription()=" + getRoleDescription()
+				+ ", getFunctionalities()=" + getFunctionalities() + "]";
 	}
+
+
 
 	
 }
