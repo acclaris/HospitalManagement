@@ -24,10 +24,6 @@ public class HospitalManagementConroller {
 		return hospitalService.getIndex();			
 	}	
 	
-	@RequestMapping(value="/welcome", method=RequestMethod.GET)
-	public String getWelcomePage(HttpServletRequest request, HttpServletResponse response){		
-		return "index";		
-	}
 	
 
 	@RequestMapping(value="/test", method=RequestMethod.GET)
