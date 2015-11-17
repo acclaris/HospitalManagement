@@ -23,7 +23,7 @@ $(document).ready(function() {
 			return false;
 		}
 
-		else if(username!='' && password!=''){
+/*		else if(username!='' && password!=''){
 
 			$('body').addClass("loading");
 			$('body', window.parent.document).css('pointer-events','none');
@@ -54,7 +54,7 @@ $(document).ready(function() {
 
 			})
 
-		}
+		}*/
 	});
 
 

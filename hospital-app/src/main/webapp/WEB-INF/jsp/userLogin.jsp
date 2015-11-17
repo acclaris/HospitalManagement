@@ -28,7 +28,7 @@
 <body>
 
 
-	<div class="error">Invalid username or password</div>
+	<!-- <div class="error">Invalid username or password</div> -->
 	
 	<div class="page-container">
 

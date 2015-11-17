@@ -33,9 +33,11 @@
 	<jsp:include page="header.jsp" />
 	<div class="page-container">
 		<div class="button-container">
-			<button id="login-user"
+		
+		<a href="#login-box" id="login-box" class="btn btn-border color-1 material-design" data-color="#2f5398">LOG IN AS A USER</a>
+			<!-- <button id="login-user"
 				class="btn btn-border color-1 material-design fancybox"
-				href="app/login" data-color="#2f5398">LOG IN AS USER</button>
+				href="app/login" data-color="#2f5398">LOG IN AS USER</button> -->
 
 			<button id="book-appointment"
 				class="btn btn-border color-1 material-design  fancybox" href="#"

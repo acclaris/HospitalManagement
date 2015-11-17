@@ -97,6 +97,11 @@ img#plus{
 	text-decoration: none;
 }
 
+a#login-box {
+	font-size : 13px;
+	padding-top:5px; 
+}
+
 .btn-border.color-1:active, .btn-border.color-1:hover {
 	background-color: #426FC5;
 }

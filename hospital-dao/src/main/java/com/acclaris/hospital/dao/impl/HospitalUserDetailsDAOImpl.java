@@ -37,8 +37,6 @@ public class HospitalUserDetailsDAOImpl implements HospitalUserDetailsDAO {
 		Map<String, String> paramMap = new HashMap<String, String>();
 		paramMap.put("userName",userName);
 		List<HospitalUser> resultSet = jdbcTemplate.query(sql, paramMap, new UserDetailRowMapper());
-		assert (resultSet!=null);
-		assert (resultSet.size()==0 || resultSet.size()==1);
-		return resultSet.get(0);
+		return ((resultSet!=null && resultSet.isEmpty())? null : resultSet.get(0)) ;
 	}
 }

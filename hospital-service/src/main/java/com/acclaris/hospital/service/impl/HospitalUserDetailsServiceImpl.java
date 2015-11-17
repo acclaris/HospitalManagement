@@ -32,7 +32,11 @@ public class HospitalUserDetailsServiceImpl implements UserDetailsService{
 		try {
 
 			HospitalUser hospitalUser = hospitalUserDetailsDAO.getUserDetails(userName);
+			if(hospitalUser==null) {
+				throw new UsernameNotFoundException("Invalid Username or Password");
+			}
 			user = new User(hospitalUser.getEmailId(), hospitalUser.getPassword(), new ArrayList<GrantedAuthority>());
+			
 
 		}
 		catch(SQLException sqle){

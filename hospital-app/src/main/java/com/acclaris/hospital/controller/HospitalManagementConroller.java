@@ -3,7 +3,9 @@ package com.acclaris.hospital.controller;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -14,6 +16,11 @@ public class HospitalManagementConroller {
 	public String getWelcomePage(HttpServletRequest request, HttpServletResponse response){		
 		return "index";	
 	}	
+	
+	@RequestMapping(value="/home", method=RequestMethod.GET)
+	public String getHomePage(HttpServletRequest request, HttpServletResponse response){		
+		return "home";	
+	}	
 
 	@RequestMapping(value="/app/login", method=RequestMethod.GET)
 	public String getLoginModal(HttpServletRequest request, HttpServletResponse response){	
@@ -23,9 +30,10 @@ public class HospitalManagementConroller {
 	@RequestMapping(value="/success", method=RequestMethod.GET)
 	public String getLoginSuccessView(HttpServletRequest request, HttpServletResponse response){	
 		System.out.println("IN SUCCESS");
-		return "redirect:successLogin";		
+		return "successLogin";		
 	}
 	@RequestMapping(value="/error", method=RequestMethod.GET)
+	@ExceptionHandler(value=UsernameNotFoundException.class)
 	public String getLoginErrorView(HttpServletRequest request, HttpServletResponse response){	
 		return "errorLogin";		
 	}
