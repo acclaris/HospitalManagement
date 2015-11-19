@@ -47,7 +47,7 @@
 	<security:http use-expressions="true" auto-config="false"
 		disable-url-rewriting="true" create-session="always">
 		<security:form-login login-page="/app/login"
-			login-processing-url="/app/j_spring_security_check" authentication-success-handler-ref="authenticationSuccessHandler"
+			login-processing-url="/j_spring_security_check" authentication-success-handler-ref="authenticationSuccessHandler"
 			authentication-failure-handler-ref="authenticationFailureHandler" />
 
 		<security:custom-filter ref="authenticationFilter"
@@ -74,7 +74,7 @@
 	<bean name="authenticationFilter"
 		class="com.acclaris.hospital.authentication.filter.HospitalUserAuthenticationFilter">
 		<property name="authenticationManager" ref="authentication-manager" />
-		<property name="filterProcessesUrl" value="/app/j_spring_security_check" />
+		<property name="filterProcessesUrl" value="/j_spring_security_check" />
 		<property name="authenticationFailureHandler" ref="authenticationFailureHandler" />
 		<property name="authenticationSuccessHandler" ref="authenticationSuccessHandler" />
 		<property name="allowSessionCreation" value="true" />

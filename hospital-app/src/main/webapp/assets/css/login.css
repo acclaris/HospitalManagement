@@ -1,19 +1,27 @@
 @CHARSET "ISO-8859-1";
 
 .page-container {
-	margin: auto;
-	background: #ffffff;
-	display: flex;
+	background: #FFF none repeat scroll 0% 0%;
 	justify-content: space-around;
 	overflow: hidden;
+	width: 51%;
+	display: none;
 	height: auto;
+	margin: auto;
+	position: fixed;
+	z-index: 99999;
+	left: 23%;
+	box-shadow: 0px 0px 20px #999;
+	border-radius: 3px;
+	top: 25%;
 }
 
 form {
 	width: 400px;
-	margin-top: 5%;
+	margin-top: 3%;
 	position: relative;
-	margin-left: -29.5%;
+	margin-left: -58.5%;
+	margin-bottom: -40px;
 }
 
 input {
@@ -68,7 +76,7 @@ button[type="submit"], button[type="button"] {
 	cursor: pointer;
 	width: 46%;
 	height: 42px;
-	margin-left: 12px;
+	margin-left: -16px;
 	margin-top: 20px;
 	padding: 0;
 	background: #ef4300;
@@ -152,13 +160,13 @@ button[type="submit"]:active, button[type="button"]:active {
 
 .divider {
 	width: 10px;
-	height: 243px;
+	height: 245px;
 	background: transparent url("../img/divider.png") no-repeat scroll 0px
 		-69px;
 	position: absolute;
-	margin-left: -123px;
 	vertical-align: middle;
 	margin-top: 28px;
+	margin-left: -16.5rem;
 }
 
 }
@@ -288,7 +296,7 @@ input:hover:valid+.tooltip {
 .form-title {
 	font-weight: bold;
 	font-size: 18px;
-	margin: 25px 33px 14px -6px;
+	margin: 22px 125px -9px -19px;
 	font-family: sans-serif;
 }
 
@@ -309,25 +317,28 @@ a#forgot-password:active, a#forgot-password:hover {
 }
 
 .info-data {
-	padding: 13px 10px 15px 55px;
 	background-repeat: no-repeat;
 	background-position: 10px center;
-	width: 16rem;
-	margin-left: -120px;
-	margin-top: 20px;
+	width: 19rem;
+	margin-top: 3px;
+	padding: 16px 10px 15px 55px;
+	margin-left: -17rem;
 }
 
 .info-headline {
 	font-family: arial, tahoma, verdana, sans-serif;
 	font-size: 14px;
 	color: #565656;
-	padding-bottom: 5px;
+	padding-bottom: 0px;
+	text-align: left;
 }
 
 .info-subheading {
 	font-family: arial, tahoma, verdana, sans-serif;
 	font-size: 12px;
 	color: #565656;
+	text-align: left;
+	margin-left: 1px;
 }
 
 .user-account {
@@ -342,36 +353,63 @@ a#forgot-password:active, a#forgot-password:hover {
 	background-image: url("../img/emergency.png");
 }
 
-.modal {
-	display: none;
-	position: fixed;
-	z-index: 1000;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background: rgba(20, 30, 40, 0.3) url('../img/progress.gif') 50% 50%
-		no-repeat;
-}
-
-body.loading {
-	overflow: hidden;
-}
-
-body.loading .modal {
-	display: block;
-}
-
-.error {
+.errorinfo {
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 11px;
+	font-size: 12px;
 	border: 1px solid;
-	margin: 10px 0px;
-	padding: 15px 10px 15px 50px;
+	margin: 23px 489px -27px -22px;
 	background-repeat: no-repeat;
 	background-position: 10px center;
 	color: #D8000C;
 	background-color: #FFBABA;
-	background-image: url('../img/error.png');
+	background-image: url("../img/error.png");
+	display: block;
+	width: 35%;
+	height: 26px;
+	padding-top: 0rem;
+	padding-left: 2rem;
+	border-radius: 0px;
+	text-align: left;
+}
+
+#mask {
 	display: none;
+	background: #000;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	background: rgba(20, 30, 40, 0.6);
+	z-index: 999;
+}
+
+@media only screen and (max-width: 1280px) {
+	img.btn_close {
+		position: fixed;
+		width: 36px;
+		height: 36px;
+		cursor: pointer;
+		z-index: 9000;
+		top: 12.8rem;
+		left: 62.8rem;
+	}
+}
+
+@media only screen and (max-width: 1368px) {
+	img.btn_close {
+		position: fixed;
+		width: 36px;
+		height: 36px;
+		cursor: pointer;
+		z-index: 9000;
+		top: 8.7rem;
+		left: 62.1rem;
+	}
+}
+
+.login-window {
+	padding-top: 5px;
+	font-size: 13px;
 }
