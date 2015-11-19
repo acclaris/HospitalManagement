@@ -33,10 +33,13 @@ public class HospitalUserDetailsDAOImpl implements HospitalUserDetailsDAO {
 	public HospitalUser getUserDetails(String userName)
 			throws SQLException, DataAccessException {
 		
-		final String sql = getUserDetailsSql();
+		final String sql = getUserDetailsSql();	
 		Map<String, String> paramMap = new HashMap<String, String>();
 		paramMap.put("userName",userName);
 		List<HospitalUser> resultSet = jdbcTemplate.query(sql, paramMap, new UserDetailRowMapper());
 		return ((resultSet!=null && resultSet.isEmpty())? null : resultSet.get(0)) ;
-	}
+	}	
+	
+	
+	
 }

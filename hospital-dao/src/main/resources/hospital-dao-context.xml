@@ -14,7 +14,7 @@
 		location="classpath:/hospital_mgmt_master.properties" />
 
 	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
-		<property name="jndiName" value="java:comp/env/HospitalDB" />
+		<property name="jndiName" value="java:comp/env/hospital_mgmt" />
 	</bean>
 
 	<bean id="jdbcTemplate"
@@ -26,5 +26,14 @@
 		class="com.acclaris.hospital.dao.impl.HospitalUserDetailsDAOImpl">
 		<property name="userDetailsSql" value="${hospital.db.select.user.details.sql}" />
 	</bean>
+	
+	<bean id="jdbcCall" class="org.springframework.jdbc.core.simple.SimpleJdbcCall">
+	<constructor-arg index="0" ref="dataSource"></constructor-arg>
+	</bean>
 
+
+<bean id="hospitalUserSearchDAO"
+		class="com.acclaris.hospital.dao.impl.SearchHospitalUserDAOImpl">
+		<property name="searchUserStoredProcedure" value="${hospital.db.searchUserStoredProcedure}" />
+	</bean>
 </beans>
