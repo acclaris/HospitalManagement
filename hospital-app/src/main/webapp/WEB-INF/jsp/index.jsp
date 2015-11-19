@@ -17,10 +17,10 @@
 <!-- CSS -->
 <link rel='stylesheet'
 	href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>
-<link rel="stylesheet" href="assets/css/reset.css">
-<link rel="stylesheet" href="assets/css/supersized.css">
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/login.css">
+<link rel="stylesheet" href="/assets/css/reset.css">
+<link rel="stylesheet" href="/assets/css/supersized.css">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/login.css">
 
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -31,12 +31,12 @@
 <body>
 	<div class="wrapper">
 		<div>
-			<img src="assets/img/sitelogo.png" id="sitelogo" />
+			<img src="/assets/img/sitelogo.png" id="sitelogo" />
 		</div>
 
 		<div class="site-text-container site-text-color-top">Super</div>
 		<div class="site-text-container word-spacing site-text-color-bottom">Medica</div>
-		<img id="plus" src="assets/img/healthcare-icon.png" />
+		<img id="plus" src="/assets/img/healthcare-icon.png" />
 
 		<div class="button-container">
 
@@ -63,14 +63,12 @@
 	<jsp:include page="userLoginFragment.jsp" />
 
 	<!-- Javascript -->
-	<script src="assets/js/jquery-1.8.2.min.js"></script>
-	<script src="assets/js/jquery-1.10.2.min.js"></script>
-	<!-- 	<script type="text/javascript"
-		src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script> -->
-	<script src="assets/js/supersized.3.2.7.min.js"></script>
-	<script src="assets/js/supersized-init.js"></script>
-	<script src="assets/js/scripts.js"></script>
-	<script type="text/javascript" src="assets/js/jquery-1.10.2.min.js"></script>
+	<script src="/assets/js/jquery-1.8.2.min.js"></script>
+	<script src="/assets/js/jquery-1.10.2.min.js"></script>
+	<script src="/assets/js/supersized.3.2.7.min.js"></script>
+	<script src="/assets/js/supersized-init.js"></script>
+	<script src="/assets/js/scripts.js"></script>
+	
 
 
 </body>

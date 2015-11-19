@@ -25,10 +25,6 @@ $(document).ready(function() {
 		return false;
 	});
 
-
-
-
-
 });
 
 
@@ -55,3 +51,5 @@ $('#user-login').submit(function(){
 	}
 
 });
+
+

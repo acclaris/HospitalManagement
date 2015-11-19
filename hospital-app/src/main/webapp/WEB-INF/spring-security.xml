@@ -36,7 +36,7 @@
 	</security:authentication-manager>
 
 
-	<security:http pattern="/app/login" security="none" />
+	<security:http pattern="/app/**" security="none" />
 	<!-- <security:http pattern="/login/forgotpassword" security="none" /> <security:http 
 		pattern="/login/sendpassword" security="none" /> <security:http pattern="/rs/**" 
 		security="none" /> <security:http pattern="/endsession" security="none" /> 
@@ -45,7 +45,7 @@
 
 
 	<security:http use-expressions="true" auto-config="false"
-		disable-url-rewriting="true" create-session="always">
+		disable-url-rewriting="true" create-session="ifRequired">
 		<security:form-login login-page="/login"
 			login-processing-url="/j_spring_security_check" authentication-success-handler-ref="authenticationSuccessHandler"
 			authentication-failure-handler-ref="authenticationFailureHandler" />
@@ -57,19 +57,18 @@
 			session-fixation-protection="newSession" /> <security:custom-filter ref="authenticationFilter" 
 			before="FORM_LOGIN_FILTER" /> <security:access-denied-handler error-page="/login" 
 			/> -->
-		<security:access-denied-handler
-			error-page="/error" />
+		<security:access-denied-handler error-page="/login/error" />
 		<security:csrf disabled="true" />
 	</security:http>
 
 	<bean name="authenticationFailureHandler"
 		class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
-		<property name="defaultFailureUrl" value="/error" />
+		<property name="defaultFailureUrl" value="/login/error" />
 	</bean>
 	
 	<bean name="authenticationSuccessHandler"
 		class="org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler">
-		<constructor-arg name="defaultTargetUrl" value="/success" />
+		<constructor-arg name="defaultTargetUrl" value="/login/success" />
 	</bean>
 	<bean name="authenticationFilter"
 		class="com.acclaris.hospital.authentication.filter.HospitalUserAuthenticationFilter">

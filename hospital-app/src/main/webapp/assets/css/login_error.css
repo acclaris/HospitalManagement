@@ -5,14 +5,14 @@
 		background: #FFF none repeat scroll 0% 0% !important;
 		justify-content: space-around !important;
 		overflow: hidden !important;
-		width: 51% !important;
+		width: 70% !important;
 		display: flex !important;
 		height: auto !important;
 		margin: auto !important;
 		position: fixed !important;
 		z-index: 99999 !important;
-		left: 23% !important;
-		box-shadow: 0px 0px 0px #fff !important;
+		left: 15% !important;
+		box-shadow: 0px 0px 0px #FFF !important;
 		border-radius: 0px !important;
 		border: 1px solid !important;
 		top: 25% !important;
@@ -184,7 +184,7 @@ input:focus:valid, input:hover:valid {
 	width: 88% !important;
 	height: 42px !important;
 	margin-left: 12px !important;
-	margin-top: 19px !important;
+	margin-top: 30px !important;
 	padding: 0 15px !important;
 	background: #2d2d2d url(../img/valid.png) no-repeat 98% center
 		!important;
@@ -227,21 +227,40 @@ input:focus:valid, input:hover:valid {
 	display: none !important;
 }
 
-.errorinfo {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	border: 1px solid;
-	margin: 57px 601px auto -58.3rem;
-	background-repeat: no-repeat;
-	background-position: 10px center;
-	color: #D8000C;
-	background-color: #FFBABA;
-	background-image: url("../img/error.png");
-	display: block !important;
-	width: 20rem;
-	height: 33px;
-	padding-top: 0.2rem;
-	padding-left: 2rem;
-	border-radius: 0px;
-	text-align: left;
+@media only screen and (max-width: 1368px) {
+	.errorinfo {
+		font-family: Arial, Helvetica, sans-serif !important;
+		font-size: 12px !important;
+		border: 1px solid !important;
+		margin: 57px 587px auto -58.3rem !important;
+		background-repeat: no-repeat !important;
+		background-position: 10px center !important;
+		color: #D8000C !important;
+		background-color: #FFBABA !important;
+		background-image: url("../img/error_small.png") !important;
+		display: block !important !important;
+		width: 19rem !important;
+		display:block !important;
+	}
+}
+
+@media only screen and (max-width: 1280px) {
+	.errorinfo {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		border: 1px solid;
+		margin: 57px 601px auto -58.3rem;
+		background-repeat: no-repeat;
+		background-position: 10px center;
+		color: #D8000C;
+		background-color: #FFBABA;
+		background-image: url("../img/error_small.png");
+		display: block !important;
+		width: 20rem;
+		height: 33px;
+		padding-top: 0.2rem;
+		padding-left: 2rem;
+		border-radius: 0px;
+		text-align: left;
+	}
 }

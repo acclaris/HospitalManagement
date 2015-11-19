@@ -1,11 +1,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <div id="login-box" class="page-container">
-	<a href="#" class="close"><img src="assets/img/fancybox_close.png"
+	<a href="#" class="close"><img src="/assets/img/fancybox_close.png"
 		class="btn_close" title="Close Window" alt="Close" /></a> <br /> <span
 		class="form-title">LOGIN</span>
 	<div class="form-container">
 		<div id="login-form-container" class="inner-form-container">
-			<form id="user-login" action="j_spring_security_check" method="post">
+			<form id="user-login" action="../j_spring_security_check" method="post">
 				<br /> <input type="text" id="username" class="username"
 					name="username" placeholder="Username" required /> <span
 					class="tooltip">Username cannot be blank</span> <input
@@ -13,7 +13,7 @@
 					placeholder="Password" required /> <span class="tooltip">Password
 					cannot be blank</span>
 				<button id="userLoginButton" type="submit">Sign In</button>
-				<a id="forgot-password" href="#">Forgot Password ?</a> <br /> <br />
+				<a id="forgot-password" href="/login/forgotpassword">Forgot Password ?</a> <br /> <br />
 				<br /> <br />
 			</form>
 		</div>
