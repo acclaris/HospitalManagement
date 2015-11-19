@@ -13,5 +13,8 @@
 	<mvc:annotation-driven />
 	
 	<import resource="classpath*:/hospital-dao-context.xml" />
+	
+	<bean id="hospitalUserSearchservice" class="com.acclaris.hospital.service.impl.HospitalUserSearchServiceImpl">	
+	</bean>
 
 </beans>
