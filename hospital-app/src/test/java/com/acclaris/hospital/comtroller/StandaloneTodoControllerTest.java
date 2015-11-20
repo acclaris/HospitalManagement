@@ -1,4 +1,4 @@
-package com.acclaris.hospital.comtroller;
+/*package com.acclaris.hospital.comtroller;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -53,4 +53,4 @@ public class StandaloneTodoControllerTest {
     
     
   
-}
+}*/
