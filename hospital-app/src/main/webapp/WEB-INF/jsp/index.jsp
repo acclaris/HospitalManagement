@@ -1,3 +1,9 @@
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,16 +17,10 @@
 <!-- CSS -->
 <link rel='stylesheet'
 	href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>
-<link rel="stylesheet" href="assets/css/reset.css">
-<link rel="stylesheet" href="assets/css/supersized.css">
-<link rel="stylesheet" href="assets/css/style.css">
-
-<link rel="stylesheet" type="text/css"
-	href="assets/css/jquery.fancybox.css" media="screen" />
-<link rel="stylesheet" type="text/css"
-	href="assets/css/jquery.fancybox-buttons.css" />
-<link rel="stylesheet" type="text/css"
-	href="assets/css/jquery.fancybox-thumbs.css" />
+<link rel="stylesheet" href="/assets/css/reset.css">
+<link rel="stylesheet" href="/assets/css/supersized.css">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/login.css">
 
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -29,12 +29,20 @@
 </head>
 
 <body>
+	<div class="wrapper">
+		<div>
+			<img src="/assets/img/sitelogo.png" id="sitelogo" />
+		</div>
 
-	<jsp:include page="header.jsp" />
-	<div class="page-container">
+		<div class="site-text-container site-text-color-top">Super</div>
+		<div class="site-text-container word-spacing site-text-color-bottom">Medica</div>
+		<img id="plus" src="/assets/img/healthcare-icon.png" />
+
 		<div class="button-container">
-		
-		<a href="#login-box" id="login-box" class="btn btn-border color-1 material-design" data-color="#2f5398">LOG IN AS A USER</a>
+
+			<a href="#login-box"
+				class="btn btn-border color-1 material-design login-window"
+				data-color="#2f5398">LOG IN AS A USER</a>
 			<!-- <button id="login-user"
 				class="btn btn-border color-1 material-design fancybox"
 				href="app/login" data-color="#2f5398">LOG IN AS USER</button> -->
@@ -48,26 +56,20 @@
 				data-color="#2f5398">VIEW PATIENT REPORT</button>
 		</div>
 
-		
+
 	</div>
 
 
-	<!-- Javascript -->
-	<script src="assets/js/jquery-1.8.2.min.js"></script>
-	<script src="assets/js/jquery-1.10.2.min.js"></script>
-	<script src="assets/js/supersized.3.2.7.min.js"></script>
-	<script src="assets/js/supersized-init.js"></script>
-	<script src="assets/js/scripts.js"></script>
-	<script src="assets/js/formactions.js" type="text/javascript"></script>
+	<jsp:include page="userLoginFragment.jsp" />
 
-	<script type="text/javascript" src="assets/js/jquery-1.10.2.min.js"></script>
-	<script type="text/javascript"
-		src="assets/js/jquery.mousewheel.pack.js"></script>
-	<script type="text/javascript" src="assets/js/jquery.fancybox.js"></script>
-	<script type="text/javascript"
-		src="assets/js/jquery.fancybox-buttons.js"></script>
-	<script type="text/javascript"
-		src="assets/js/jquery.fancybox-thumbs.js"></script>
-	<script type="text/javascript" src="assets/js/jquery.fancybox-media.js"></script>
+	<!-- Javascript -->
+	<script src="/assets/js/jquery-1.8.2.min.js"></script>
+	<script src="/assets/js/jquery-1.10.2.min.js"></script>
+	<script src="/assets/js/supersized.3.2.7.min.js"></script>
+	<script src="/assets/js/supersized-init.js"></script>
+	<script src="/assets/js/scripts.js"></script>
+	
+
+
 </body>
 </html>
