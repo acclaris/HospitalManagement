@@ -40,7 +40,6 @@
 			<artifactId>hospital-model</artifactId>
 			<version>${app-version}</version>
 		</dependency>
-
 	</dependencies>
 
 	<build>
