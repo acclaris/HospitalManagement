@@ -1,6 +1,6 @@
-package com.acclaris.hospital.exception;
+package com.acclaris.hospital.common.exception;
 
-public class ServiceException extends RuntimeException {
+public class CustomGenericException extends RuntimeException {
 
 	private static final long serialVersionUID = 1L;
 
@@ -23,7 +23,7 @@ public class ServiceException extends RuntimeException {
 		this.errMsg = errMsg;
 	}
 
-	public ServiceException(String errCode, String errMsg) {
+	public CustomGenericException(String errCode, String errMsg) {
 		this.errCode = errCode;
 		this.errMsg = errMsg;
 	}

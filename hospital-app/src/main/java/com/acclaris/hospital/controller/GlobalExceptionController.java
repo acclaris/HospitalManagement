@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.acclaris.hospital.exception.CustomGenericException;
-import com.acclaris.hospital.exception.ServiceException;
-import com.acclaris.hospital.exception.TechnicalException;
+import com.acclaris.hospital.common.exception.CustomGenericException;
+import com.acclaris.hospital.common.exception.ServiceException;
+import com.acclaris.hospital.common.exception.TechnicalException;
 
 @ControllerAdvice
 public class GlobalExceptionController {

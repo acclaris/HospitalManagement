@@ -1,4 +1,4 @@
-package com.acclaris.hospital.exception;
+package com.acclaris.hospital.common.exception;
 
 public class TechnicalException extends RuntimeException {
 

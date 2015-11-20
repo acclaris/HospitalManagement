@@ -10,11 +10,9 @@
 	<context:annotation-config />
 
 	<mvc:annotation-driven />
-	<context:property-placeholder
-		location="classpath:/hospital_mgmt_master.properties" />
 
 	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
-		<property name="jndiName" value="java:comp/env/hospital_mgmt" />
+		<property name="jndiName" value="java:comp/env/HospitalManagement" />
 	</bean>
 
 	<bean id="jdbcTemplate"
@@ -24,7 +22,6 @@
 
 	<bean id="hospitalUserDetailsDAO"
 		class="com.acclaris.hospital.dao.impl.HospitalUserDetailsDAOImpl">
-		<property name="userDetailsSql" value="${hospital.db.select.user.details.sql}" />
 	</bean>
 	
 	<bean id="jdbcCall" class="org.springframework.jdbc.core.simple.SimpleJdbcCall">

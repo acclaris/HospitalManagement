@@ -19,5 +19,11 @@
 			<artifactId>hospital-dao</artifactId>
 			<version>${app-version}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.acclaris</groupId>
+			<artifactId>hospital-common</artifactId>
+			<version>${app-version}</version>
+		</dependency>
+		
 	</dependencies>
 </project>
