@@ -1,7 +1,7 @@
 package com.acclaris.hospital.model.role.manager;
 
 import java.io.Serializable;
-import java.util.List;
+import java.util.Set;
 
 import com.acclaris.hospital.model.Functionality;
 
@@ -36,11 +36,11 @@ public class InventoryManagerRole extends ManagerRole implements Serializable {
 		super.setRoleDescription(roleDescription);
 	}
 
-	public List<Functionality> getFunctionalities() {
+	public Set<Functionality> getFunctionalities() {
 		return super.getFunctionalities();
 	}
 
-	public void setFunctionalities(List<Functionality> functionalities) {
+	public void setFunctionalities(Set<Functionality> functionalities) {
 		super.setFunctionalities(functionalities);
 	}
 

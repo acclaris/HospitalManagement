@@ -2,6 +2,10 @@ package com.acclaris.hospital.model;
 
 import java.io.Serializable;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class UserStatus implements Serializable {
 
 	/**
@@ -9,8 +13,10 @@ public class UserStatus implements Serializable {
 	 */
 	private static final long serialVersionUID = 637067111537730402L;
 
+	@XmlElement
 	private String statusCode;
 
+	@XmlElement
 	private String statusDesc;
 
 	public String getStatusCode() {

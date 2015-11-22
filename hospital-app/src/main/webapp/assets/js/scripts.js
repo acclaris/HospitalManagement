@@ -1,5 +1,23 @@
 
 $(document).ready(function() {
+	$('a.book-appointment-window').click(function() {
+
+		// Getting the variable's value from a link 
+		var bookAppointmentBox = $(this).attr('href');
+
+		//Fade in the Popup and add close button
+		$(bookAppointmentBox).fadeIn(300);
+
+		$(bookAppointmentBox).css("display","flex");
+		$('input').val("");
+
+		// Add the mask to body
+		$('.wrapper').append('<div id="mask"></div>');
+		$('#mask').fadeIn(300);
+
+		return false;
+	});
+
 	$('a.login-window').click(function() {
 
 		// Getting the variable's value from a link 
@@ -9,6 +27,7 @@ $(document).ready(function() {
 		$(loginBox).fadeIn(300);
 
 		$(loginBox).css("display","flex");
+		$('input').val("");
 
 		// Add the mask to body
 		$('.wrapper').append('<div id="mask"></div>');

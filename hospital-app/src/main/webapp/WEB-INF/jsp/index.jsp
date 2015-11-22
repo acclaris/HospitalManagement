@@ -3,7 +3,8 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec"%>
+<%@ taglib uri="http://www.springframework.org/security/tags"
+	prefix="sec"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +21,7 @@
 <link rel="stylesheet" href="/assets/css/reset.css">
 <link rel="stylesheet" href="/assets/css/supersized.css">
 <link rel="stylesheet" href="/assets/css/style.css">
-<link rel="stylesheet" href="/assets/css/login.css">
+<link rel="stylesheet" href="/assets/css/fragmentstyles.css">
 
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -47,9 +48,9 @@
 				class="btn btn-border color-1 material-design fancybox"
 				href="app/login" data-color="#2f5398">LOG IN AS USER</button> -->
 
-			<button id="book-appointment"
-				class="btn btn-border color-1 material-design  fancybox" href="#"
-				data-color="#2f5398">BOOK AN APPOINTMENT</button>
+			<a href="#patient-id-input-box"
+				class="btn btn-border color-1 material-design book-appointment-window"
+				data-color="#2f5398">BOOK AN APPOINTMENT</a>
 
 			<button id="view-patient-report"
 				class="btn btn-border color-1 material-design  fancybox" href="#"
@@ -60,7 +61,8 @@
 	</div>
 
 
-	<jsp:include page="userLoginFragment.jsp" />
+	<jsp:include page="fragments/userLoginFragment.jsp" />
+	<jsp:include page="fragments/patientIdInputFragment.jsp" />
 
 	<!-- Javascript -->
 	<script src="/assets/js/jquery-1.8.2.min.js"></script>
@@ -68,7 +70,7 @@
 	<script src="/assets/js/supersized.3.2.7.min.js"></script>
 	<script src="/assets/js/supersized-init.js"></script>
 	<script src="/assets/js/scripts.js"></script>
-	
+
 
 
 </body>

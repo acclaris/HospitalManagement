@@ -30,6 +30,7 @@ public class HospitalAppConstants implements Serializable {
 	public static final String FORGOT_PASSWORD_MAPPING = "/login/forgotpassword";
 	public static final String RESET_PASSWORD_MAPPING = "/reset";
 	public static final String ANY_DOMAIN_MAPPING = "/{directory:.+}";
+	public static final String NEW_APPOINTMENT_PAGE_MAPPING = "/appointment/book/new";
 	
 	/* Property Files List*/
 	

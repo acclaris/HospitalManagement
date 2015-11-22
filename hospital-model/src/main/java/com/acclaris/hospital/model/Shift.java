@@ -3,21 +3,31 @@ package com.acclaris.hospital.model;
 import java.io.Serializable;
 import java.sql.Timestamp;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Shift implements Serializable {
 
 	/**
 	 * 
 	 */
+	@XmlElement
 	private static final long serialVersionUID = -8190233792454631527L;
-	
+
+	@XmlElement
 	private String shiftId;
-	
+
+	@XmlElement
 	private Timestamp shiftStartTime;
-	
+
+	@XmlElement
 	private Timestamp shiftEndTime;
 
+	@XmlElement
 	private String shortCode;
-	
+
+	@XmlElement
 	private String shiftDesc;
 
 	public String getShiftId() {
@@ -65,7 +75,7 @@ public class Shift implements Serializable {
 		return "Shift [shiftId=" + shiftId + ", shiftStartTime=" + shiftStartTime + ", shiftEndTime=" + shiftEndTime
 				+ ", shortCode=" + shortCode + ", shiftDesc=" + shiftDesc + "]";
 	}
-	
-	
-	
+
+
+
 }

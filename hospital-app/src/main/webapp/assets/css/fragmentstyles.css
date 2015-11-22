@@ -1,7 +1,7 @@
 @CHARSET "ISO-8859-1";
 
 @media only screen and (max-width: 1368px) {
-	.page-container {
+	div.page-container {
 		background: #FFF none repeat scroll 0% 0%;
 		justify-content: space-around;
 		overflow: hidden;
@@ -12,7 +12,7 @@
 		position: fixed;
 		z-index: 99999;
 		left: 23%;
-		box-shadow: 0px 0px 20px #999;
+		box-shadow: 0px 0px 20px #7c7c7c;
 		border-radius: 3px;
 		border: 1px solid;
 		top: 25%;
@@ -20,7 +20,7 @@
 }
 
 @media only screen and (max-width: 1280px) {
-	.page-container {
+	div.page-container {
 		background: #FFF none repeat scroll 0% 0%;
 		justify-content: space-around;
 		overflow: hidden;
@@ -31,11 +31,15 @@
 		position: fixed;
 		z-index: 99999;
 		left: 23%;
-		box-shadow: 0px 0px 20px #999;
+		box-shadow: 0px 0px 20px #7c7c7c;
 		border-radius: 3px;
 		border: 1px solid;
 		top: 25%;
 	}
+}
+
+div.patient-id-input-box {
+	height: 13.5rem;
 }
 
 form {
@@ -44,6 +48,23 @@ form {
 	position: relative;
 	margin-left: -58.5%;
 	margin-bottom: -40px;
+}
+
+form#patient-id-input-form {
+	margin-top: 1.8%;
+	position: relative;
+	margin-bottom: auto;
+	width: 40.9rem;
+	margin-left: -17.1rem;
+	border: 1px solid #000;
+	height: 11rem;
+}
+
+input.patient-id-input, input.patient-id-input:required, input.patient-id-input:focus,
+	input.patient-id-input:focus:invalid, input.patient-id-input:hover:invalid,
+	input.patient-id-input:hover, input.patient-id-input:focus:valid, input.patient-id-input:hover:valid{
+	margin-top: 3.5rem;
+	margin-left: -2rem;
 }
 
 input {
@@ -92,6 +113,14 @@ input:focus, input:hover {
 		rgba(0, 0, 0, .2);
 	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1) inset, 0 2px 7px 0
 		rgba(0, 0, 0, .2);
+}
+
+button.patient-details-submit, button.patient-details-submit:hover,
+	button.patient-details-submit:active {
+	width: 25% !important;
+	margin-left: 1.5rem !important;
+	display: block !important;
+	margin-top: 2% !important;
 }
 
 button[type="submit"], button[type="button"] {
@@ -178,6 +207,23 @@ button[type="submit"]:active, button[type="button"]:active {
 	display: flex;
 	max-width: 101rem;
 	justify-content: center;
+}
+
+div#patient-id-input-container {
+	height: 19rem;
+	margin-top: 6%;
+	width: 54%;
+	margin-left: 24%;
+}
+
+span#patient-id-input-text {
+	margin-top: 1%;
+	display: block;
+	margin-bottom: -5%;
+	margin-left: -72%;
+	font-size: 17px;
+	font-family: Helvetica;
+	font-weight: bold;
 }
 
 .divider {
@@ -299,6 +345,11 @@ input:focus:valid, input:hover:valid {
 	font-family: sans-serif;
 }
 
+.tooltip-position {
+	margin-left:-22rem;
+	margin-top: 106px;
+}
+
 .tooltip::before {
 	content: "\25b2";
 	color: #FF0000;
@@ -412,11 +463,43 @@ a#forgot-password:active, a#forgot-password:hover {
 	}
 }
 
-.login-window {
+hr {
+	border: 0px none;
+	height: 1px;
+	background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.75),
+		transparent);
+	margin-top: 6%;
+	margin-bottom: -6%;
+}
+
+.login-window, .book-appointment-window {
 	padding-top: 5px;
 	font-size: 13px;
 }
 
 .errorinfo {
 	display: none;
+}
+
+a.first-appointment-link {
+	font-family: sans-serif;
+	font-size: 15px;
+	display: block;
+	text-decoration: none;
+	margin-left: 47%;
+	margin-top: -3.6%;
+}
+
+a.first-appointment-link:hover, a.first-appointment-link:active {
+	text-decoration: underline;
+}
+
+span#first-appointment-advice {
+	font-family: sans-serif;
+	font-size: 18px;
+	display: block;
+	text-decoration: none;
+	margin-top: -5%;
+	margin-left: 2%;
+}
 }

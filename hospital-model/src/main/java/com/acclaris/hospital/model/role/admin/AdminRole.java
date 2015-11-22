@@ -1,10 +1,13 @@
 package com.acclaris.hospital.model.role.admin;
 
-import java.util.List;
+import java.util.Set;
+
+import javax.xml.bind.annotation.XmlRootElement;
 
 import com.acclaris.hospital.model.Functionality;
 import com.acclaris.hospital.model.role.UserRole;
 
+@XmlRootElement
 public abstract class AdminRole extends UserRole {
 
 	public String getRoleId() {
@@ -30,11 +33,11 @@ public abstract class AdminRole extends UserRole {
 		super.setRoleDescription(roleDescription);
 	}
 
-	public List<Functionality> getFunctionalities() {
+	public Set<Functionality> getFunctionalities() {
 		return super.getFunctionalities();
 	}
 
-	public void setFunctionalities(List<Functionality> functionalities) {
+	public void setFunctionalities(Set<Functionality> functionalities) {
 		super.setFunctionalities(functionalities);
 	}
 

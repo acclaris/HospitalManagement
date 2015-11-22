@@ -18,7 +18,7 @@
 	href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>
 <link rel="stylesheet" href="/assets/css/reset.css">
 <link rel="stylesheet" href="/assets/css/style.css">
-<link rel="stylesheet" href="/assets/css/login.css">
+<link rel="stylesheet" href="/assets/css/fragmentstyles.css">
 <link rel="stylesheet" href="/assets/css/login_error.css">
 
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -31,7 +31,7 @@
 	<div class="wrapper">
 		<jsp:include page="header.jsp" />
 	</div>
-	<jsp:include page="userLoginFragment.jsp" />
+	<jsp:include page="fragments/userLoginFragment.jsp" />
 	
 	<!-- Javascript -->
 	<script src="/assets/js/jquery-1.8.2.min.js"></script>

@@ -57,7 +57,7 @@ public class HospitalUserServiceImpl implements UserDetailsService, HospitalUser
 
 	@Override
 	@Transactional(propagation=Propagation.MANDATORY, rollbackFor=Exception.class)
-	public void resetUserPassword(String emailId) throws ServiceException {
+	public void resetUserPassword(String emailId) throws Exception {
 			
 		if(getUserDetailsByEmailId(emailId)!=null){
 			

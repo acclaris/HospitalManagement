@@ -144,6 +144,13 @@ public class HospitalManagementController {
 		return authentication;
 
 	}
+	
+	@RequestMapping(value=HospitalAppConstants.NEW_APPOINTMENT_PAGE_MAPPING, method=RequestMethod.GET)
+	public String getBookNewAppointmentView(HttpServletRequest request, HttpServletResponse reponse){
+		
+		return "bookAppointment";
+		
+	}
 	private boolean isAnonymousPrincipal(Authentication authentication){
 		String principalName = authentication!=null ? authentication.getName() : null;
 		if(HospitalAppConstants.ANONYMOUS_PRINCIPAL.equals(principalName)){
