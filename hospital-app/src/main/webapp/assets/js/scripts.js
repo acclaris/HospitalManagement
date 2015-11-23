@@ -44,6 +44,18 @@ $(document).ready(function() {
 		return false;
 	});
 
+
+	$(function() {
+		$( "#appointment-datepicker" ).datepicker({
+
+			changeMonth: true,
+			changeYear: true,
+			showOtherMonths: true,
+			selectOtherMonths: true,
+			minDate: "+1W"
+		});
+	});
+
 });
 
 

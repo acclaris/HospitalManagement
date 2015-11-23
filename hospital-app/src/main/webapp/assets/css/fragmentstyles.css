@@ -62,7 +62,8 @@ form#patient-id-input-form {
 
 input.patient-id-input, input.patient-id-input:required, input.patient-id-input:focus,
 	input.patient-id-input:focus:invalid, input.patient-id-input:hover:invalid,
-	input.patient-id-input:hover, input.patient-id-input:focus:valid, input.patient-id-input:hover:valid{
+	input.patient-id-input:hover, input.patient-id-input:focus:valid, input.patient-id-input:hover:valid
+	{
 	margin-top: 3.5rem;
 	margin-left: -2rem;
 }
@@ -216,14 +217,27 @@ div#patient-id-input-container {
 	margin-left: 24%;
 }
 
-span#patient-id-input-text {
-	margin-top: 1%;
-	display: block;
-	margin-bottom: -5%;
-	margin-left: -72%;
-	font-size: 17px;
-	font-family: Helvetica;
-	font-weight: bold;
+@media only screen and (max-width: 1280px) {
+	span#patient-id-input-text {
+		margin-top: 1% !important;
+		display: block !important;
+		margin-bottom: -5% !important;
+		margin-left: -48% !important;
+		font-size: 17px !important;
+		font-family: Helvetica !important;
+		font-weight: bold !important;
+	}
+}
+@media only screen and (max-width: 1368px) {
+	span#patient-id-input-text {
+		margin-top: 1%;
+		display: block;
+		margin-bottom: -5%;
+		margin-left: -72%;
+		font-size: 17px;
+		font-family: Helvetica;
+		font-weight: bold;
+	}
 }
 
 .divider {
@@ -346,7 +360,7 @@ input:focus:valid, input:hover:valid {
 }
 
 .tooltip-position {
-	margin-left:-22rem;
+	margin-left: -22rem;
 	margin-top: 106px;
 }
 
