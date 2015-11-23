@@ -217,27 +217,14 @@ div#patient-id-input-container {
 	margin-left: 24%;
 }
 
-@media only screen and (max-width: 1280px) {
-	span#patient-id-input-text {
-		margin-top: 1% !important;
-		display: block !important;
-		margin-bottom: -5% !important;
-		margin-left: -48% !important;
-		font-size: 17px !important;
-		font-family: Helvetica !important;
-		font-weight: bold !important;
-	}
-}
-@media only screen and (max-width: 1368px) {
-	span#patient-id-input-text {
-		margin-top: 1%;
-		display: block;
-		margin-bottom: -5%;
-		margin-left: -72%;
-		font-size: 17px;
-		font-family: Helvetica;
-		font-weight: bold;
-	}
+span#patient-id-input-text {
+	margin-top: 1% !important;
+	display: block !important;
+	margin-bottom: -5% !important;
+	margin-left: -48% !important;
+	font-size: 17px !important;
+	font-family: Helvetica !important;
+	font-weight: bold !important;
 }
 
 .divider {
@@ -251,7 +238,6 @@ div#patient-id-input-container {
 	margin-left: -16rem;
 }
 
-}
 input:required {
 	width: 88%;
 	height: 42px;
@@ -461,7 +447,7 @@ a#forgot-password:active, a#forgot-password:hover {
 		cursor: pointer;
 		z-index: 9000;
 		top: 8.7rem;
-		left: 62.1rem;
+		left: 61.4rem;
 	}
 }
 

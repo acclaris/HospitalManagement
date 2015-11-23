@@ -424,7 +424,7 @@ input:hover:valid+.tooltip {
 span.patient-details {
 	font-weight: bold;
 	font-size: 18px;
-	margin: -15px auto auto 0.6rem;
+	margin: -15px auto auto 0.66rem;
 	font-family: sans-serif;
 	background: rgba(180, 180, 180, 0.4) none repeat scroll 0% 0%;
 	padding: 10px 10px 10px 12px;
@@ -433,22 +433,38 @@ span.patient-details {
 	display: block;
 }
 
-span.appointment-form-heading {
-	font-weight: bold;
-	font-size: 18px;
-	margin: 18px auto -3rem 9.3rem;
-	font-family: sans-serif;
-	background: rgba(180, 180, 180, 0.4) none repeat scroll 0% 0%;
-	padding: 10px 10px 10px 12px;
-	width: 77.5%;
-	text-align: left;
-	display: block;
+@media only screen and (max-width: 1280px) {
+	span.appointment-form-heading {
+		font-weight: bold;
+		font-size: 18px;
+		margin: 18px auto -3rem 9.3rem;
+		font-family: sans-serif;
+		background: rgba(180, 180, 180, 0.4) none repeat scroll 0% 0%;
+		padding: 10px 10px 10px 12px;
+		width: 77.5%;
+		text-align: left;
+		display: block;
+	}
 }
 
-.appointment-details {
+@media only screen and (max-width: 1368px) {
+	span.appointment-form-heading {
+		font-weight: bold;
+		font-size: 18px;
+		margin: 18px auto -3rem 12.0rem;
+		font-family: sans-serif;
+		background: rgba(180, 180, 180, 0.4) none repeat scroll 0% 0%;
+		padding: 10px 10px 10px 12px;
+		width: 72.5%;
+		text-align: left;
+		display: block;
+	}
+}
+
+span.appointment-details {
 	font-weight: bold;
 	font-size: 18px;
-	margin: -4rem auto auto 0.6rem;
+	margin: -4rem auto auto 0.66rem;
 	font-family: sans-serif;
 	background: rgba(180, 180, 180, 0.4) none repeat scroll 0% 0%;
 	padding: 10px 10px 10px 12px;
@@ -607,6 +623,7 @@ span#first-appointment-advice {
 	margin-left: 2%;
 }
 
+
 select.appointment-details-dropdown, select.patient-details-dropdown {
 	-moz-appearance: none;
 	border: 0px none !important;
@@ -627,4 +644,19 @@ select.appointment-details-dropdown, select.patient-details-dropdown {
 select.patient-details-dropdown {
 	margin-left: 12rem;
 	width: 40%;
+}
+
+span.appointment-note {
+	color: #F00;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	display: block;
+	margin-top: 4rem;
+	margin-bottom: -4rem;
+	margin-left: -17rem;
+}
+
+select:hover, select:active, select:focus {
+	border: 1px solid #F00 !important;
 }

@@ -83,4 +83,28 @@ $('#user-login').submit(function(){
 
 });
 
+$('#book-appointment-form').submit(function(){
+	var plaintext = $(this).find('.plaintext').val();
+	var selectOptionValue = $(this).find('.dropdown').options[$(this).find('.dropdown').selectedIndex].value;
+	if(plaintext == '') {
+		$(this).find('.error').fadeOut('fast', function(){
+			$(this).css('top', '27px');
+		});
+		$(this).find('.error').fadeIn('fast', function(){
+			$(this).parent().find('.plaintext').focus();
+		});
+		return false;
+	}
+	if(selectOptionValue == 'Select') {
+		$(this).find('.error').fadeOut('fast', function(){
+			$(this).css('top', '96px');
+		});
+		$(this).find('.error').fadeIn('fast', function(){
+			$(this).parent().find('.dropdown').focus();
+		});
+		return false;
+	}
+
+});
+
 
