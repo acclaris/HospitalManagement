@@ -1,5 +1,7 @@
 package com.acclaris.hospital.model.user;
 
+import javax.xml.bind.annotation.XmlElement;
+
 import com.acclaris.hospital.model.Branch;
 import com.acclaris.hospital.model.UserStatus;
 import com.acclaris.hospital.model.department.Department;
@@ -7,28 +9,39 @@ import com.acclaris.hospital.model.marker.User;
 import com.acclaris.hospital.model.role.UserRole;
 
 public abstract class HospitalUser implements User {
-	
-	
+
+
+	@XmlElement
 	private String userId;
-	
+
+	@XmlElement
 	private transient String password;
-	
+
+	@XmlElement
 	private String firstName;
-	
+
+	@XmlElement
 	private String lastName;
-	
+
+	@XmlElement
 	private String gender;
-	
+
+	@XmlElement
 	private String emailId;
-	
+
+	@XmlElement
 	private String address;
-	
+
+	@XmlElement
 	private UserStatus userStatus;
-	
+
+	@XmlElement
 	private UserRole userRole;
-	
+
+	@XmlElement
 	private Department department;
-	
+
+	@XmlElement
 	private Branch branchDetails;
 
 	public String getUserId() {
@@ -119,8 +132,8 @@ public abstract class HospitalUser implements User {
 		this.branchDetails = branchDetails;
 	}
 
-	
-	
-	
+
+
+
 
 }

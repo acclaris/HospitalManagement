@@ -1,14 +1,19 @@
 package com.acclaris.hospital.model.user.staff;
 
+import java.io.Serializable;
+
 import com.acclaris.hospital.model.Branch;
 import com.acclaris.hospital.model.UserStatus;
 import com.acclaris.hospital.model.department.Department;
 import com.acclaris.hospital.model.role.UserRole;
 
-public class Nurse extends Staff{
+public class Nurse extends Staff implements Serializable{
 	
-private static final long serialVersionUID = 3376103235126872272L;
-	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2473837797214662381L;
+
 	public String getUserId() {
 		return super.getUserId();
 	}

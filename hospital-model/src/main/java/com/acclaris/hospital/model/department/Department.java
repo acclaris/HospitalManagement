@@ -1,16 +1,21 @@
 package com.acclaris.hospital.model.department;
 
-import java.util.List;
+import java.util.Set;
+
+import javax.xml.bind.annotation.XmlElement;
 
 import com.acclaris.hospital.model.Shift;
 
 public abstract class Department {
 	
+	@XmlElement
 	private String departmentId;
 	
+	@XmlElement
 	private String departmentName;
 	
-	private List<Shift> departmentShifts;
+	@XmlElement
+	private Set<Shift> departmentShifts;
 
 	protected String getDepartmentId() {
 		return this.departmentId;
@@ -28,13 +33,15 @@ public abstract class Department {
 		this.departmentName = departmentName;
 	}
 
-	protected List<Shift> getDepartmentShifts() {
-		return this.departmentShifts;
+	public Set<Shift> getDepartmentShifts() {
+		return departmentShifts;
 	}
 
-	protected void setDepartmentShifts(List<Shift> departmentShifts) {
+	public void setDepartmentShifts(Set<Shift> departmentShifts) {
 		this.departmentShifts = departmentShifts;
 	}
+
+
 	
 	
 

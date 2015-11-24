@@ -11,13 +11,13 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.util.ReflectionTestUtils;
 
-import com.acclaris.hospital.controller.HospitalManagementConroller;
+import com.acclaris.hospital.controller.HospitalManagementController;
 import com.acclaris.hospital.service.HospitalService;
 import com.acclaris.hospital.service.impl.HospitalServiceImpl;
 
 public class HospitalManagementConrollerTest {
 
-	private HospitalManagementConroller controller;
+	private HospitalManagementController controller;
 
 	@Autowired
 	private HospitalService hospitalService;
@@ -28,7 +28,7 @@ public class HospitalManagementConrollerTest {
 	@Before
 	public void setUp() {
 		System.out.println("Before");
-		controller = new HospitalManagementConroller();
+		controller = new HospitalManagementController();
 		hospitalService = new HospitalServiceImpl();
 		ReflectionTestUtils.setField(controller, "hospitalService", hospitalService);
 	}
@@ -50,7 +50,7 @@ public class HospitalManagementConrollerTest {
 	@After
 	public void tearDown() {
 		System.out.println("After");
-		controller = new HospitalManagementConroller();
+		controller = new HospitalManagementController();
 
 	}
 

@@ -21,7 +21,7 @@
 	</bean>
 
 	<bean id="hospitalUserDetailService"
-		class="com.acclaris.hospital.service.impl.HospitalUserDetailsServiceImpl" />
+		class="com.acclaris.hospital.service.impl.HospitalUserServiceImpl" />
 
 	<bean id="authProvider"
 		class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">

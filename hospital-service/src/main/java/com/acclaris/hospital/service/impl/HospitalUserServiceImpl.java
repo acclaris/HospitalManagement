@@ -10,12 +10,16 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
+import com.acclaris.hospital.common.exception.ServiceException;
 import com.acclaris.hospital.dao.HospitalUserDetailsDAO;
 import com.acclaris.hospital.model.user.HospitalUser;
+import com.acclaris.hospital.service.HospitalUserCommonService;
 
 
-public class HospitalUserDetailsServiceImpl implements UserDetailsService{
+public class HospitalUserServiceImpl implements UserDetailsService, HospitalUserCommonService{
 
 	@Autowired
 	private HospitalUserDetailsDAO hospitalUserDetailsDAO;
@@ -31,7 +35,7 @@ public class HospitalUserDetailsServiceImpl implements UserDetailsService{
 
 		try {
 
-			HospitalUser hospitalUser = hospitalUserDetailsDAO.getUserDetails(userName);
+			HospitalUser hospitalUser = hospitalUserDetailsDAO.getUserDetailsByUserName(userName);
 			if(hospitalUser==null) {
 				throw new UsernameNotFoundException("Invalid Username or Password");
 			}
@@ -49,6 +53,21 @@ public class HospitalUserDetailsServiceImpl implements UserDetailsService{
 			e.printStackTrace();
 		}
 		return user;
+	}
+
+	@Override
+	@Transactional(propagation=Propagation.MANDATORY, rollbackFor=Exception.class)
+	public void resetUserPassword(String emailId) throws Exception {
+			
+		if(getUserDetailsByEmailId(emailId)!=null){
+			
+		}
+		
+		
+	}
+	
+	private HospitalUser getUserDetailsByEmailId(String emailId) throws ServiceException {
+		return null;
 	}
 
 }

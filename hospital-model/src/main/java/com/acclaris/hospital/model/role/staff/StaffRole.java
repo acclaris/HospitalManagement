@@ -1,6 +1,6 @@
 package com.acclaris.hospital.model.role.staff;
 
-import java.util.List;
+import java.util.Set;
 
 import com.acclaris.hospital.model.Functionality;
 import com.acclaris.hospital.model.role.UserRole;
@@ -31,11 +31,11 @@ public abstract class StaffRole extends UserRole {
 		super.setRoleDescription(roleDescription);
 	}
 	
-	public List<Functionality> getFunctionalities() {
+	public Set<Functionality> getFunctionalities() {
 		return super.getFunctionalities();
 	}
 
-	public void setFunctionalities(List<Functionality> functionalities) {
+	public void setFunctionalities(Set<Functionality> functionalities) {
 		super.setFunctionalities(functionalities);
 	}
 

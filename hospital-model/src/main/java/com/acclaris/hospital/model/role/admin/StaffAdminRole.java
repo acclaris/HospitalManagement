@@ -1,10 +1,13 @@
 package com.acclaris.hospital.model.role.admin;
 
 import java.io.Serializable;
-import java.util.List;
+import java.util.Set;
+
+import javax.xml.bind.annotation.XmlRootElement;
 
 import com.acclaris.hospital.model.Functionality;
 
+@XmlRootElement
 public class StaffAdminRole extends AdminRole implements Serializable {
 
 	/**
@@ -35,11 +38,11 @@ public class StaffAdminRole extends AdminRole implements Serializable {
 		super.setRoleDescription(roleDescription);
 	}
 
-	public List<Functionality> getFunctionalities() {
+	public Set<Functionality> getFunctionalities() {
 		return super.getFunctionalities();
 	}
 
-	public void setFunctionalities(List<Functionality> functionalities) {
+	public void setFunctionalities(Set<Functionality> functionalities) {
 		super.setFunctionalities(functionalities);
 	}
 	

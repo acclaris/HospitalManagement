@@ -1,7 +1,7 @@
 package com.acclaris.hospital.model.department;
 
 import java.io.Serializable;
-import java.util.List;
+import java.util.Set;
 
 import com.acclaris.hospital.model.Shift;
 
@@ -28,11 +28,11 @@ public class TransportDepartment extends Department implements Serializable {
 		super.setDepartmentName(departmentName);
 	}
 
-	public List<Shift> getDepartmentShifts() {
+	public Set<Shift> getDepartmentShifts() {
 		return super.getDepartmentShifts();
 	}
 
-	public void setDepartmentShifts(List<Shift> departmentShifts) {
+	public void setDepartmentShifts(Set<Shift> departmentShifts) {
 		super.setDepartmentShifts(departmentShifts);
 	}
 

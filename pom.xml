@@ -13,6 +13,7 @@
 		<module>hospital-dao</module>
 		<module>hospital-model</module>
 		<module>hospital-app</module>
+		<module>hospital-common</module>
 	</modules>
 
 	<properties>

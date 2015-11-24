@@ -1,7 +1,7 @@
 package com.acclaris.hospital.model.role.staff;
 
 import java.io.Serializable;
-import java.util.List;
+import java.util.Set;
 
 import com.acclaris.hospital.model.Functionality;
 
@@ -12,11 +12,11 @@ public class ReceptionistRole extends StaffRole implements Serializable {
 	 */
 	private static final long serialVersionUID = -5150405626433689547L;
 
-	public List<Functionality> getFunctionalities() {
+	public Set<Functionality> getFunctionalities() {
 		return super.getFunctionalities();
 	}
 
-	public void setFunctionalities(List<Functionality> functionalities) {
+	public void setFunctionalities(Set<Functionality> functionalities) {
 		super.setFunctionalities(functionalities);
 	}
 

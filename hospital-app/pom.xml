@@ -40,6 +40,12 @@
 			<artifactId>hospital-model</artifactId>
 			<version>${app-version}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.acclaris</groupId>
+			<artifactId>hospital-common</artifactId>
+			<version>${app-version}</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
