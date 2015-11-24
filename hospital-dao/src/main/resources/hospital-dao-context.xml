@@ -19,7 +19,7 @@
 	<mvc:annotation-driven />
 
 	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
-		<property name="jndiName" value="java:comp/env/HospitalDB" />
+		<property name="jndiName" value="java:comp/env/HospitalManagement" />
 	</bean>
 
 	<bean id="jdbcTemplate"
