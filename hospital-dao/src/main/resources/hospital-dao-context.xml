@@ -17,9 +17,17 @@
 	<context:annotation-config />
 
 	<mvc:annotation-driven />
+	<context:property-placeholder location="classpath*:/hospital_mgmt_dao.properties"/>
 
-	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
-		<property name="jndiName" value="java:comp/env/HospitalManagement" />
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="${hospital.mgmt.db.connection.driver}" />
+		<property name="url" value="${hospital.mgmt.db.connection.url}" />
+		<property name="username" value="${hospital.mgmt.db.username}" />
+		<property name="password" value="${hospital.mgmt.db.password}" />
+		<property name="maxActive" value="${hospital.mgmt.db.maxActive}" />
+		<property name="minIdle" value="${hospital.mgmt.db.minIdle}" />
+		<property name="maxWait" value="${hospital.mgmt.db.maxWait}" />
+		<property name="defaultAutoCommit" value="${hospital.mgmt.db.defaultAutoCommit}" />	
 	</bean>
 
 	<bean id="jdbcTemplate"
