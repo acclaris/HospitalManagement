@@ -1,0 +1,662 @@
+@CHARSET "ISO-8859-1";
+
+div.patient-id-input-box {
+	height: 13.5rem;
+}
+
+form {
+	margin-top: 4.7%;
+	position: relative;
+	width: 61rem;
+	margin-left: 1%;
+	border: 1px solid;
+	height: 90%;
+	padding-bottom: 25px;
+	margin-bottom: auto;
+}
+
+.appointment-form-container {
+	align-content: center;
+	align-items: flex-start;
+	display: flex;
+	max-width: 101rem;
+	justify-content: center;
+	margin-top: 5rem;
+	margin-bottom: 2rem;
+}
+
+form#patient-id-input-form {
+	margin-top: 1.8%;
+	position: relative;
+	margin-bottom: auto;
+	width: 40.9rem;
+	margin-left: -17.1rem;
+	border: 1px solid #000;
+	height: 11rem;
+}
+
+label {
+	display: inline-block;
+	margin-left: 3rem;
+	margin-top: auto;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 12px;
+	margin-right: -15px;
+	font-weight: bold;
+	word-spacing: 1px;
+}
+
+input.short-input, input.short-input:required, input.short-input:focus,
+	input.short-input:focus:invalid, input.short-input:hover:invalid, input.short-input:hover,
+	input.short-input:focus:valid, input.short-input:hover:valid {
+	width: 8rem;
+	display: inline-block;
+	margin-left: 13.1rem;
+	margin-top: -2.3rem;
+}
+
+input.long-input, input.long-input:required, input.long-input:focus,
+	input.long-input:focus:invalid, input.long-input:hover:invalid, input.long-input:hover,
+	input.long-input:focus:valid, input.long-input:hover:valid {
+	width: 19rem;
+	display: block;
+	margin-left: 6.5rem;
+	margin-top: -2.1rem;
+}
+
+label.short-input {
+	display: inline-block;
+	margin-top: 2rem;
+	margin-right: -11rem;
+	margin-left: 2.2rem;
+	word-spacing: 1px;
+}
+
+label.long-input {
+	display: inline-block;
+	margin-top: 2rem;
+	margin-right: 50rem;
+	margin-left: -1.3rem;
+	padding: 0px;
+	width: 69px;
+}
+
+label.comments-input {
+	display: inline-block;
+	margin-top: 2rem;
+	margin-right: 50rem;
+	margin-left: -2.7rem;
+	padding: 0px;
+	width: 27rem;
+}
+
+label.datepicker-input {
+	margin-left: -30rem;
+	margin-top: 4rem;
+}
+
+div.short-field-container {
+	overflow: hidden;
+	margin-top: 0rem;
+	height: 21%;
+	float: left;
+	text-align: left;
+	margin-right: -0.1rem;
+	width: 33%;
+	position: relative;
+	margin-left: 0.2rem;
+}
+
+div.long-field-container {
+	width: 100%;
+}
+
+textarea.comments {
+	color: #000;
+	outline: medium none;
+	border: 1px solid #35A5E5;
+}
+
+textarea.comments {
+	color: #666;
+	font-size: 14px;
+	margin: 1rem 2.3rem auto;
+	padding: 10px;
+	height: 102px;
+	width: 89%;
+	border: 1px solid #999;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	display: block;
+	resize: none;
+}
+
+textarea.comments {
+	color: #000;
+	outline: none;
+	border: #35a5e5 1px solid;
+}
+
+input {
+	height: 42px;
+	margin-left: 31px;
+	margin-top: 19px;
+	width: 28%;
+	padding: 0px 15px;
+	background: rgba(45, 45, 45, 0.15) none repeat scroll 0% 0%;
+	border-radius: 6px;
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1) inset;
+	font-family: "PT Sans", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: #000;
+	text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+	transition: all 0.2s ease 0s;
+}
+
+input:-moz-placeholder {
+	color: black;
+}
+
+input:-ms-input-placeholder {
+	color: black;
+}
+
+input::-webkit-input-placeholder {
+	color: black;
+}
+
+input:focus, input:hover {
+	outline: none;
+	-moz-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1) inset, 0 2px 7px 0
+		rgba(0, 0, 0, .2);
+	-webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1) inset, 0 2px 7px 0
+		rgba(0, 0, 0, .2);
+	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1) inset, 0 2px 7px 0
+		rgba(0, 0, 0, .2);
+}
+
+button.patient-details-submit, button.patient-details-submit:hover,
+	button.patient-details-submit:active {
+	width: 25% !important;
+	margin-left: 1.5rem !important;
+	display: block !important;
+	margin-top: 2% !important;
+}
+
+button[type="submit"], button[type="button"] {
+	cursor: pointer;
+	width: 26%;
+	height: 42px;
+	margin-left: -16px;
+	margin-top: 20px;
+	padding: 0;
+	background: #ef4300;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #ff730e;
+	-moz-box-shadow: 0 15px 30px 0 rgba(255, 255, 255, .25) inset, 0 2px 7px
+		0 rgba(0, 0, 0, .2);
+	-webkit-box-shadow: 0 15px 30px 0 rgba(255, 255, 255, .25) inset, 0 2px
+		7px 0 rgba(0, 0, 0, .2);
+	box-shadow: 0 15px 30px 0 rgba(255, 255, 255, .25) inset, 0 2px 7px 0
+		rgba(0, 0, 0, .2);
+	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	color: #fff;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+	-o-transition: all .2s;
+	-moz-transition: all .2s;
+	-webkit-transition: all .2s;
+	-ms-transition: all .2s;
+	text-decoration: none;
+}
+
+button[type="submit"]:hover, button[type="button"]:hover {
+	-moz-box-shadow: 0 15px 30px 0 rgba(255, 255, 255, .15) inset, 0 2px 7px
+		0 rgba(0, 0, 0, .2);
+	-webkit-box-shadow: 0 15px 30px 0 rgba(255, 255, 255, .15) inset, 0 2px
+		7px 0 rgba(0, 0, 0, .2);
+	box-shadow: 0 15px 30px 0 rgba(255, 255, 255, .15) inset, 0 2px 7px 0
+		rgba(0, 0, 0, .2);
+	text-decoration: none;
+}
+
+button[type="submit"]:active, button[type="button"]:active {
+	-moz-box-shadow: 0 15px 30px 0 rgba(255, 255, 255, .15) inset, 0 2px 7px
+		0 rgba(0, 0, 0, .2);
+	-webkit-box-shadow: 0 15px 30px 0 rgba(255, 255, 255, .15) inset, 0 2px
+		7px 0 rgba(0, 0, 0, .2);
+	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, .1) inset, 0 1px 4px 0
+		rgba(0, 0, 0, .1);
+	border: 0px solid #ef4300;
+	text-decoration: none;
+}
+
+.error {
+	display: none;
+	position: absolute;
+	top: 27px;
+	right: -55px;
+	width: 40px;
+	height: 40px;
+	background: #2d2d2d; /* browsers that don't support rgba */
+	background: rgba(45, 45, 45, .25);
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+}
+
+.error span {
+	display: inline-block;
+	margin-left: 2px;
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 40px;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+	-o-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+}
+
+div#patient-id-input-container {
+	height: 19rem;
+	margin-top: 6%;
+	width: 54%;
+	margin-left: 24%;
+}
+
+span#patient-id-input-text {
+	margin-top: 1%;
+	display: block;
+	margin-bottom: -5%;
+	margin-left: -72%;
+	font-size: 17px;
+	font-family: Helvetica;
+	font-weight: bold;
+}
+
+.divider {
+	width: 1px;
+	height: 220px;
+	background: transparent url("../img/divider.png") no-repeat scroll 0px
+		-69px;
+	position: absolute;
+	vertical-align: middle;
+	margin-top: 16px;
+	margin-left: -16rem;
+}
+
+input:required {
+	height: 42px;
+	margin-left: 31px;
+	margin-top: 19px;
+	width: 28%;
+	padding: 0 15px;
+	background: #2d2d2d url(../img/asterisk.png) no-repeat 98% center;
+	/* browsers that don't support rgba */
+	background: rgba(45, 45, 45, .15) url(../img/asterisk.png) no-repeat 98%
+		center;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #3d3d3d; /* browsers that don't support rgba */
+	border: 1px solid rgba(255, 255, 255, .15);
+	-moz-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1) inset;
+	-webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1) inset;
+	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1) inset;
+	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: black;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+	-o-transition: all 0s;
+	-moz-transition: all 0s;
+	-webkit-transition: all 0s;
+	-ms-transition: all 0s;
+}
+
+input:focus:invalid, input:hover:invalid {
+	height: 42px;
+	margin-left: 31px;
+	margin-top: 19px;
+	width: 28%;
+	padding: 0 15px;
+	background: #2d2d2d url(../img/invalid.png) no-repeat 98% center;
+	/* browsers that don't support rgba */
+	background: rgba(45, 45, 45, .15) url(../img/invalid.png) no-repeat 98%
+		center;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #3d3d3d; /* browsers that don't support rgba */
+	border: 1px solid rgba(255, 255, 255, .15);
+	-moz-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1) inset;
+	-webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1) inset;
+	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1) inset;
+	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: black;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+	-o-transition: all 0s;
+	-moz-transition: all 0s;
+	-webkit-transition: all 0s;
+	-ms-transition: all 0s;
+	box-shadow: 0 0 5px #fe2701;
+	-moz-box-shadow: 0 0 5px #fe2701;
+	-webkit-box-shadow: 0 0 5px #fe2701;
+	border-color: #fe2701;
+}
+
+input:focus:valid, input:hover:valid {
+	height: 42px;
+	margin-left: 31px;
+	margin-top: 19px;
+	width: 28%;
+	padding: 0 15px;
+	background: #2d2d2d url(../img/valid.png) no-repeat 98% center;
+	/* browsers that don't support rgba */
+	background: rgba(45, 45, 45, .15) url(../img/valid.png) no-repeat 98%
+		center;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #3d3d3d; /* browsers that don't support rgba */
+	border: 1px solid rgba(255, 255, 255, .15);
+	-moz-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1) inset;
+	-webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1) inset;
+	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1) inset;
+	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: black;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+	-o-transition: all 0s;
+	-moz-transition: all 0s;
+	-webkit-transition: all 0s;
+	-ms-transition: all 0s;
+	box-shadow: 0 0 5px #53fe01;
+	-moz-box-shadow: 0 0 5px #53fe01;
+	-webkit-box-shadow: 0 0 5px #53fe01;
+	border-color: #53fe01;
+}
+
+.tooltip {
+	background: #FF8080 none repeat scroll 0% 0%;
+	border: 2px solid #F00;
+	margin-left: -206px;
+	padding: 5px;
+	z-index: 999;
+	display: none;
+	margin-top: 4.3rem;
+	font-size: 12px;
+	color: #000;
+	font-weight: bold;
+	font-family: sans-serif;
+	position: fixed;
+}
+
+.tooltip-small {
+	margin-left: -144px;
+}
+
+.tooltip-position {
+	margin-left: -22rem;
+	margin-top: 106px;
+}
+
+.tooltip::before {
+	content: "\25b2";
+	color: #FF0000;
+	position: absolute;
+	top: -17px;
+	left: 66px;
+}
+
+input:hover+.tooltip {
+	display: inline;
+}
+
+input:hover:valid+.tooltip {
+	display: none;
+}
+
+span.patient-details {
+	font-weight: bold;
+	font-size: 18px;
+	margin: -15px auto auto 0.66rem;
+	font-family: sans-serif;
+	background: rgba(180, 180, 180, 0.4) none repeat scroll 0% 0%;
+	padding: 10px 10px 10px 12px;
+	width: 97.8%;
+	text-align: left;
+	display: block;
+}
+
+@media only screen and (max-width: 1280px) {
+	span.appointment-form-heading {
+		font-weight: bold !important;
+		font-size: 18px !important;
+		margin: 18px auto -3rem 9.3rem !important;
+		font-family: sans-serif !important;
+		background: rgba(180, 180, 180, 0.4) none repeat scroll 0% 0% !important;
+		padding: 10px 10px 10px 12px !important;
+		width: 77.5% !important;
+		text-align: left !important;
+		display: block !important;
+	}
+}
+
+@media only screen and (max-width: 1368px) {
+	span.appointment-form-heading {
+		font-weight: bold;
+		font-size: 18px;
+		margin: 18px auto -3rem 12.0rem;
+		font-family: sans-serif;
+		background: rgba(180, 180, 180, 0.4) none repeat scroll 0% 0%;
+		padding: 10px 10px 10px 12px;
+		width: 72.5%;
+		text-align: left;
+		display: block;
+	}
+}
+
+span.appointment-details {
+	font-weight: bold;
+	font-size: 18px;
+	margin: -4rem auto auto 0.66rem;
+	font-family: sans-serif;
+	background: rgba(180, 180, 180, 0.4) none repeat scroll 0% 0%;
+	padding: 10px 10px 10px 12px;
+	width: 97.8%;
+	text-align: left;
+	display: block;
+}
+
+.patient-name-details {
+	margin-top: -3rem;
+	margin-left: -2rem;
+	width: 101%;
+}
+
+.branch-info-details {
+	margin-top: -3rem;
+	margin-left: -3rem;
+	width: 97%;
+	word-spacing: 2px;
+}
+
+.contact-details {
+	margin-left: -47px;
+	margin-top: 4.3rem;
+	height: 12rem;
+	margin-bottom: -6rem;
+}
+
+a#forgot-password {
+	font-family: sans-serif;
+	color: #000000;
+	text-decoration: none;
+	margin-left: 16px;
+	font-size: 14px;
+}
+
+a#forgot-password:active, a#forgot-password:hover {
+	font-family: sans-serif;
+	color: #0000ff;
+	text-decoration: underline;
+	margin-left: 16px;
+	font-size: 14px;
+}
+
+.info-data {
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	width: 19rem;
+	margin-top: 3px;
+	padding: 16px 10px 15px 55px;
+	margin-left: -17rem;
+}
+
+.info-headline {
+	font-family: arial, tahoma, verdana, sans-serif;
+	font-size: 14px;
+	color: #565656;
+	padding-bottom: 0px;
+	text-align: left;
+}
+
+.info-subheading {
+	font-family: arial, tahoma, verdana, sans-serif;
+	font-size: 12px;
+	color: #565656;
+	text-align: left;
+	margin-left: 1px;
+}
+
+.user-account {
+	background-image: url("../img/users.png");
+}
+
+.appointment {
+	background-image: url("../img/appointment.png");
+}
+
+.emergency {
+	background-image: url("../img/emergency.png");
+}
+
+#mask {
+	display: none;
+	background: #000;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	background: rgba(20, 30, 40, 0.6);
+	z-index: 999;
+}
+
+@media only screen and (max-width: 1368px) {
+	.btn_close {
+		position: fixed;
+		width: 36px;
+		height: 36px;
+		cursor: pointer;
+		z-index: 9000;
+		top: 8.7rem;
+		left: 62.1rem;
+	}
+}
+
+@media only screen and (max-width: 1280px) {
+	.btn_close {
+		position: fixed;
+		width: 36px;
+		height: 36px;
+		cursor: pointer;
+		z-index: 9000;
+		top: 12.8rem;
+		left: 63rem;
+	}
+}
+
+hr {
+	border: 0px none;
+	height: 1px;
+	background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.75),
+		transparent);
+	margin-top: 6%;
+	margin-bottom: -6%;
+}
+
+.login-window, .book-appointment-window {
+	padding-top: 5px;
+	font-size: 13px;
+}
+
+.errorinfo {
+	display: none;
+}
+
+a.first-appointment-link {
+	font-family: sans-serif;
+	font-size: 15px;
+	display: block;
+	text-decoration: none;
+	margin-left: 47%;
+	margin-top: -3.6%;
+}
+
+a.first-appointment-link:hover, a.first-appointment-link:active {
+	text-decoration: underline;
+}
+
+span#first-appointment-advice {
+	font-family: sans-serif;
+	font-size: 18px;
+	display: block;
+	text-decoration: none;
+	margin-top: -5%;
+	margin-left: 2%;
+}
+
+
+select.appointment-details-dropdown, select.patient-details-dropdown {
+	-moz-appearance: none;
+	border: 0px none !important;
+	color: #838383;
+	border-radius: 5px;
+	font-size: 14px;
+	padding: 10px;
+	cursor: pointer;
+	background: rgba(45, 45, 45, 0.15) url("../img/drop-down-arrow.png")
+		no-repeat scroll right center/40px 37px;
+	margin-left: 2rem;
+	margin-top: 1rem;
+	width: 31%;
+	margin-right: -23px;
+	word-spacing: 2px;
+}
+
+select.patient-details-dropdown {
+	margin-left: 12rem;
+	width: 40%;
+}
+
+span.appointment-note {
+	color: #F00;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	display: block;
+	margin-top: 4rem;
+	margin-bottom: -4rem;
+	margin-left: -17rem;
+}
+
+select:hover, select:active, select:focus {
+	border: 1px solid #F00 !important;
+}
