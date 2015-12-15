@@ -1,0 +1,58 @@
+input.search-input
+{
+	margin-top: 3.5rem;
+	margin-left: -2rem;
+	background: rgba(45, 45, 45, 0.15) none repeat scroll 0 0;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1) inset;
+    color: black;
+    font-family: "PT Sans",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    height: 42px;
+    margin-left: 12px;
+    margin-top: 19px;
+    padding: 0 15px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease 0s;
+    width: 22%;
+}
+
+button.search-submit {
+	width: 25% !important;
+	margin-left: 1.5rem !important;
+	display: block !important;
+	margin-top: 2% !important;
+}
+
+input:focus:invalid, input:hover:invalid {
+	width: 22%;
+	height: 42px;
+	margin-left: 12px;
+	margin-top: 19px;
+	padding: 0 15px;
+	background: #2d2d2d url(../img/invalid.png) no-repeat 98% center;
+	/* browsers that don't support rgba */
+	background: rgba(45, 45, 45, .15) url(../img/invalid.png) no-repeat 98%
+		center;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #3d3d3d; /* browsers that don't support rgba */
+	border: 1px solid rgba(255, 255, 255, .15);
+	-moz-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1) inset;
+	-webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1) inset;
+	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1) inset;
+	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: black;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+	-o-transition: all 0s;
+	-moz-transition: all 0s;
+	-webkit-transition: all 0s;
+	-ms-transition: all 0s;
+	box-shadow: 0 0 5px #fe2701;
+	-moz-box-shadow: 0 0 5px #fe2701;
+	-webkit-box-shadow: 0 0 5px #fe2701;
+	border-color: #fe2701;
+}
