@@ -20,6 +20,7 @@
 	<link rel="stylesheet" href="/hospital-app/assets/css/supersized.css">
 	<link rel="stylesheet" href="/hospital-app/assets/css/style.css">
 	<link rel="stylesheet" href="/hospital-app/assets/css/fragmentstyles.css">
+	<link rel="stylesheet" href="/hospital-app/assets/css/search.css">
 
 </head>
 
