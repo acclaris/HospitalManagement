@@ -346,8 +346,8 @@ input:focus:valid, input:hover:valid {
 }
 
 .tooltip-position {
-	margin-left: -22rem;
-	margin-top: 106px;
+	margin-left: -9rem;
+	margin-top: 60px;
 }
 
 .tooltip::before {
